@@ -1,18 +1,10 @@
 # Requirements
 
-<li>
-<a href="https://github.com/dylanaraps/neofetch">Neofetch</a>
-</li>
-<li>
-<a href="https://github.com/vim/vim">Vim</a>
-<h4> -- Bash</h4>
-<li><a href="https://github.com/scop/bash-completion">Bash completion</a>
-</li>
+- [Neofetch](#https://github.com/dylanaraps/neofetch)
+- [Vim](https://github.com/vim/vim)
 
-<li>
-<a href="https://github.com/sharkdp/bat">Bat</a>
-</li>
+## Bash
 
-<li>
-<a href="https://github.com/nvbn/thefuck">TheFuck</a>
-</li>
+- [Bash Completion](https://github.com/scop/bash-completion)
+- [Bat](https://github.com/sharkdp/bat)
+- [TheFuck](https://github.com/nvbn/thefuck)
