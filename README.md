@@ -8,3 +8,6 @@
 - [Bash Completion](https://github.com/scop/bash-completion)
 - [Bat](https://github.com/sharkdp/bat)
 - [TheFuck](https://github.com/nvbn/thefuck)
+
+
+- [vim](./vim/)
