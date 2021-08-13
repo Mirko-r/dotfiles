@@ -1,6 +1,6 @@
 # Requirements
 
-- [Neofetch](#https://github.com/dylanaraps/neofetch)
+- [Neofetch](https://github.com/dylanaraps/neofetch)
 - [Vim](https://github.com/vim/vim)
 
 ## Bash
