@@ -30,14 +30,6 @@ set statusline+=%r%=[%{&encoding}\ %{&fileformat}\ %{strlen(&ft)?&ft:'none'}]\ %
 autocmd InsertEnter * :set norelativenumber
 autocmd InsertLeave * :set relativenumber
 
-" Centralize backups, swapfiles and undo history
-set backupdir=/etc/vim/backups
-set directory=/etc/vim/swaps
-
-if exists("&undodir")
-	set undodir=/etc/vim/undo
-endif
-
 filetype off			" required
 syntax on			" enable syntax higlight
 
