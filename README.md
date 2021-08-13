@@ -3,7 +3,7 @@
 <li>
 <a href="https://github.com/dylanaraps/neofetch">Neofetch</a>
 </li>
-<li><h4>Bash</h4></li>
+<h4> -- Bash</h4>
 <li><a href="https://github.com/scop/bash-completion">Bash completion</a>
 </li>
 
