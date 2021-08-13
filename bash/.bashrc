@@ -166,3 +166,6 @@ export EDITOR=vim
 
 #Wrong command? Just type "fuck" and bash will correct for you
 eval $(thefuck --alias)
+
+# Next-generation cd
+source $HOME/enhancd/init.sh
