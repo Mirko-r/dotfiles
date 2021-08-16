@@ -8,7 +8,7 @@
 - [Bash Completion](https://github.com/scop/bash-completion)
 - [Bat](https://github.com/sharkdp/bat)
 - [TheFuck](https://github.com/nvbn/thefuck)
-- [hstr](https://github.com/dvorka/hstr)
+- [Hstr](https://github.com/dvorka/hstr)
 
 # Table of content
 
