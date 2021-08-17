@@ -2,7 +2,7 @@
 
 <h1>Bash config files</h1>
 
-<img src="https://th.bing.com/th/id/OIP.wq5e7eX6D_WpC-oIaS1p9wHaEo?pid=ImgDet&rs=1">
+<img src="https://juncotic.com/wp-content/uploads/2014/07/Gnu-bash-logo.svg_.png">
 
 </div>
 
