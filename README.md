@@ -86,5 +86,15 @@ Reading package lists... Done
 
 ```
 
+- ### hstr
+Are you looking for a command that you used **recently**? Do you
+want to  avoid the need to write **long commands** over and over
+again? Are you looking for a tool that is able to manage your
+**favorite** commands?
 
+HSTR (**H**i**ST**o**R**y) is a command line utility that brings improved `bash`/`zsh` command completion
+from the history. It aims to make completion **easier** and more **efficient**, just type <kbd>Ctrl-r</kbd>.
 
+HSTR can also **manage** your command history (for instance you can remove
+commands that are obsolete or contain a piece of sensitive information)
+or **bookmark** your favorite commands.
