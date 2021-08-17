@@ -1,5 +1,5 @@
-# Table of content
+## Table of content
 
-- [Bash Config](./bash/)
+- [Bash Config](./bash.md)
 - [Vim Config](./vim/)
 - [Neofetch Config](./neofetch)
