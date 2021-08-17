@@ -17,7 +17,7 @@ $> git clone https://github.com/Mirko-r/dotfiles.git
 $> cd bash
 $> chmod u+x install.sh
 $> ./install.sh
-```
+```---
 
 
 
