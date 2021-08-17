@@ -1,7 +1,5 @@
 # Bash config files
 
----
-
 ## Requirements
 
 - Cargo
