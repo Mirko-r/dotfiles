@@ -38,6 +38,11 @@ if has('mouse')
   set mouse=a
 endif
 
+" Backup, swap, undo
+set backupdir=/tmp
+set directory=/tmp
+set undodir=/tmp
+
 "Return to last edit position when opening files
 autocmd BufReadPost *
     \ if line("'\"") >=1 && line("'\"") <= line("$") && &ft !~# 'commit'
