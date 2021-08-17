@@ -1,5 +1,6 @@
 <div align="center">
   <h1>Mirko's dotfiles</h1>
+  <img src="https://th.bing.com/th/id/OIP.i7eoZ4kMLuCeJOxulEm13gHaDB?pid=ImgDet&rs=1">
 </div>
 
 ## Table of content
@@ -86,7 +87,7 @@ Reading package lists... Done
 
 ```
 
-- ### hstr
+- ### Hstr
 Are you looking for a command that you used **recently**? Do you
 want to  avoid the need to write **long commands** over and over
 again? Are you looking for a tool that is able to manage your
@@ -98,3 +99,14 @@ from the history. It aims to make completion **easier** and more **efficient**, 
 HSTR can also **manage** your command history (for instance you can remove
 commands that are obsolete or contain a piece of sensitive information)
 or **bookmark** your favorite commands.
+
+- ### Enhancd
+`cd` command is one of the frequently used commands.
+
+Nevertheless, it is not so easy to handle unfortunately. A directory path given as an argument to `cd` command must be a valid path that exists and is able to resolve. In other words, you cannot pass a partial path such as "dir" (you are in `/home/lisa`, dir is `/home/lisa/work/dir`) to `cd` command.
+
+The new cd command called "enhancd" enhanced the flexibility and usability for a user. enhancd will memorize all directories visited by a user and use it for the pathname resolution. If the log of enhancd have more than one directory path with the same name, enhancd will pass the candidate directories list to the filter within the ENHANCD_FILTER environment variable in order to narrow it down to one directory.
+
+Thanks to this mechanism, the user can intuitively and easily change the directory you want to go.
+
+![](https://raw.githubusercontent.com/b4b4r07/screenshots/master/enhancd/demo.gif)
