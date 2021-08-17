@@ -1,3 +1,7 @@
+<div align="center">
+  <h1>Mirko's dotfiles</h1>
+</div>
+
 ## Table of content
 
 - [Bash Config](#bash)
