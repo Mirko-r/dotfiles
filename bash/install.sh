@@ -19,10 +19,12 @@ git clone https://github.com/dvorka/hstr.git
 cd ./build/tarball && ./tarball-automake.sh && cd ../..
 ./configure && make && make install
 
-echo "Done!"
-
 echo "Moving dotfiles to home dir"
+
 mv .bashrc $HOME
 mv .bash_profile $HOME
 mv .bash_logout $HOME
 mv enhancd $HOME
+
+
+echo "Done!"
