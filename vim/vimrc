@@ -18,6 +18,8 @@ set autochdir			" auto change work directory
 set ttimeoutlen=0               " toggle between modes almost instantly
 set numberwidth=3		" How many column to use for the line number
 set showmode			" Show current mode
+set diffopt=filler 		" Add vertical spaces to keep right and left aligned
+set diffopt+=iwhite 		" Ignore whitespace changes (focus on code changes)
 
 " status line
 set statusline=
