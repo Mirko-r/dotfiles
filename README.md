@@ -35,11 +35,16 @@ $> ./install.sh
 ```
 
 ## Features
+- <kbd>bat</kbd> a cat clone with wings
+- <kbd>TheFuck</kbd> type fuck for correct the last command
+- <kbd>hstr</kbd> next gen history for bash 
+- <kbd>enhancd</kbd> next gen cd 
+<br>
+<br>
 
 - ### Bat
 
 ### Syntax highlighting
-
 `bat` supports syntax highlighting for a large number of programming and markup
 languages:
 
