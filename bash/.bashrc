@@ -2,8 +2,12 @@
 # ~/.bashrc
 #
 
-# If not running interactively, don't do anything
+# If not running interactively, don't do anything 
 [[ $- != *i* ]] && return
+
+
+
+#================  CONFIGS  ================
 
 # Autocorrect typos in path names when usign cd
 shopt -s cdspell
@@ -64,6 +68,10 @@ xterm*|rxvt*)
     ;;
 esac
 
+
+
+#================  ALIASES  ================
+
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -84,9 +92,6 @@ elif [ "$PLATFORM" = Darwin ]; then
   alias ls='ls -G'
 fi 
 
-# colored GCC warnings and errors
-export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
@@ -95,6 +100,35 @@ alias l='ls -CF'
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+# Make cat better with bat
+alias cat="bat"
+
+# Open any file using its default program
+alias open="xdg-open"
+
+# Confirm before overwriting something
+alias cp="cp -i"
+alias mv='mv -i'
+alias rm='rm -i'
+
+
+#================  EXPORTS  =================
+
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+
+#set bat as manpager
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
+# Custom path
+export PATH=$PATH:$HOME/.local/bin:$HOME/.cargo/bin
+
+#Default editor is vim of course
+export EDITOR=vim
+
+
+
+#================  BASH COMPLETION  ==============
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -112,43 +146,11 @@ if [ -f /etc/bash_completion/pip ]; then
   . /etc/bash_completion/pip
 fi
 
-#make cat better with bat
-alias cat='bat'
-
-#set bat as manpager
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-
-# Change up a variable number of directories
-# E.g:
-#   cu   -> cd ../
-#   cu 2 -> cd ../../
-#   cu 3 -> cd ../../../
-function cu {
-    local count=$1
-    if [ -z "${count}" ]; then
-        count=1
-    fi
-    local path=""
-    for i in $(seq 1 ${count}); do
-        path="${path}../"
-    done
-    cd $path
-}
-
-#Open any file using its default program
-alias open="xdg-open"
-
-#Default editor is vim of course
-export EDITOR=vim
-
-#Wrong command? Just type "fuck" and bash will correct for you
-eval $(thefuck --alias)
-
-# Next-generation cd
-source $HOME/enhancd/init.sh
 
 
-# HSTR configuration
+#===============  FEATURES CONFIG ================	
+
+# HSTR 
 
 alias hh=hstr                    # hh to be alias for hstr
 export HSTR_CONFIG=hicolor       # get more colors
@@ -162,3 +164,11 @@ export PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}"
 if [[ $- =~ .*i.* ]]; then bind '"\C-r": "\C-a hstr -- \C-j"'; fi
 # if this is interactive shell, then bind 'kill last command' to Ctrl-x k
 if [[ $- =~ .*i.* ]]; then bind '"\C-xk": "\C-a hstr -k \C-j"'; fi
+
+# ENHANCD
+
+source $HOME/enhancd/init.sh
+
+# THEFUCK
+
+eval $(thefuck --alias)
