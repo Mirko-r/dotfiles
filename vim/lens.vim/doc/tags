@@ -1,0 +1,17 @@
+g:lens#animate	lens.txt	/*g:lens#animate*
+g:lens#animate	lens.txt	/*g:lens#animate*
+g:lens#disabled	lens.txt	/*g:lens#disabled*
+g:lens#disabled_buftypes	lens.txt	/*g:lens#disabled_buftypes*
+g:lens#disabled_filenames	lens.txt	/*g:lens#disabled_filenames*
+g:lens#disabled_filetypes	lens.txt	/*g:lens#disabled_filetypes*
+g:lens#height_resize_max	lens.txt	/*g:lens#height_resize_max*
+g:lens#height_resize_min	lens.txt	/*g:lens#height_resize_min*
+g:lens#width_resize_max	lens.txt	/*g:lens#width_resize_max*
+g:lens#width_resize_min	lens.txt	/*g:lens#width_resize_min*
+lens	lens.txt	/*lens*
+lens-configuration	lens.txt	/*lens-configuration*
+lens-contents	lens.txt	/*lens-contents*
+lens-introduction	lens.txt	/*lens-introduction*
+lens-introduction-animation	lens.txt	/*lens-introduction-animation*
+lens-usage	lens.txt	/*lens-usage*
+lens.txt	lens.txt	/*lens.txt*
