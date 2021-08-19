@@ -77,11 +77,20 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
     \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
 
-"NERDTree devicons
+" NERDTree devicons
 Plugin 'ryanoasis/vim-devicons'
 
-"Higlight filename
+" Higlight filename
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
+
+" Higlight full name
+let g:NERDTreeFileExtensionHighlightFullName = 1
+let g:NERDTreeExactMatchHighlightFullName = 1
+let g:NERDTreePatternMatchHighlightFullName = 1
+
+let g:NERDTreeHighlightFolders = 1 " enables folder icon highlighting using exact match
+let g:NERDTreeHighlightFoldersFullName = 1 " highlights the folder name
+
 
 " Whenever cursor jumps some distance or moves between windows, it will flash so you can see where it is.
 Plugin 'danilamihailov/beacon.nvim'
@@ -95,6 +104,16 @@ let  g:C_UseTool_doxygen = 'yes'
 
 " .csv file support
 Plugin 'chrisbra/csv.vim'
+
+" Detect .csv files
+if exists("did_load_csvfiletype")
+  finish
+endif
+let did_load_csvfiletype=1
+
+augroup filetypedetect
+  au! BufRead,BufNewFile *.csv,*.dat	setfiletype csv
+augroup END
 
 " PHP Support
 "Plugin 'phpvim/phpcd.vim'
