@@ -115,7 +115,7 @@ alias rm='rm -i'
 
 # System information
 alias inf="uname -sr && uptime| sed 's/ //' && sensors| grep Pack && \
-	   lscpu| grep 'CPU MHz:' && acpi && \
+	   lscpu| grep 'CPU' && \
 	   echo -n 'Memory in use: ' && free -m| grep Mem|\
 	   awk '{print \$3+\$5\" megs\"}'"
 
