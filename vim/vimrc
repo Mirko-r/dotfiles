@@ -122,6 +122,10 @@ Plugin 'tobyS/pdv'
 " Autocolosing brackets
 Plugin 'Raimondi/delimitMate'
 
+" Automatically resize windows
+Plugin 'camspiers/animate.vim'
+Plugin 'camspiers/lens.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
