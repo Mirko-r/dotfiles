@@ -1,3 +1,4 @@
+
 #
 # ~/.bashrc
 #
@@ -112,6 +113,13 @@ alias cp="cp -i"
 alias mv='mv -i'
 alias rm='rm -i'
 
+# System information
+alias inf="uname -sr && uptime| sed 's/ //' && sensors| grep Pack && \
+	   lscpu| grep 'CPU MHz:' && acpi && \
+	   echo -n 'Memory in use: ' && free -m| grep Mem|\
+	   awk '{print \$3+\$5\" megs\"}'"
+
+
 
 #================  EXPORTS  =================
 
@@ -172,3 +180,12 @@ source $HOME/enhancd/init.sh
 # THEFUCK
 
 eval $(thefuck --alias)
+
+
+
+#================  FUNCTIONS  ================
+
+function mkcd() {
+  mkdir $1
+  cd $1
+}
