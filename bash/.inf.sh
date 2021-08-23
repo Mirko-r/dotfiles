@@ -26,6 +26,7 @@ echo "Choose an option below!
        	5 - Verify desktop memory
 	6 - Verify serial number
 	7 - Verify system IP	 
+	8 - Get CPU Temp
 	0 - Exit"
 echo " "
 echo -n "Chosen option: "
@@ -159,6 +160,15 @@ case $opcao in
 			echo IP is: $IP_SISTEMA
 		}
 		ip
+		read -n 1 -p "<Enter> for main menu"
+		menuprincipal
+		;;
+
+	8)
+		TEMP_FILE=/sys/class/thermal/thermal_zone0/temp
+                ORIGINAL_TEMP=$(cat $TEMP_FILE)
+                TEMP_C=$((ORIGINAL_TEMP/1000))
+                echo "Cpu temperature is : $TEMP_C ˚C"
 		read -n 1 -p "<Enter> for main menu"
 		menuprincipal
 		;;
