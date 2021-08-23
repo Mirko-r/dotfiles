@@ -24,7 +24,7 @@ echo "Moving dotfiles to home dir"
 mv .bashrc $HOME
 mv .bash_profile $HOME
 mv .bash_logout $HOME
-mv enhancd $HOME
+mv .inf.sh $HOME
 
 
 echo "Done!"
