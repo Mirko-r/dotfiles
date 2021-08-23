@@ -1,4 +1,3 @@
-
 #
 # ~/.bashrc
 #
@@ -114,10 +113,7 @@ alias mv='mv -i'
 alias rm='rm -i'
 
 # System information
-alias inf="uname -sr && uptime| sed 's/ //' && sensors| grep Pack && \
-	   lscpu| grep 'CPU' && \
-	   echo -n 'Memory in use: ' && free -m| grep Mem|\
-	   awk '{print \$3+\$5\" megs\"}'"
+alias inf="chmod u+x .inf.sh && ./.inf.sh"
 
 
 
