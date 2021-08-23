@@ -165,10 +165,13 @@ case $opcao in
 		;;
 
 	8)
-		TEMP_FILE=/sys/class/thermal/thermal_zone0/temp
-                ORIGINAL_TEMP=$(cat $TEMP_FILE)
-                TEMP_C=$((ORIGINAL_TEMP/1000))
-                echo "Cpu temperature is : $TEMP_C ˚C"
+		function cpu_temp(){
+		        TEMP_FILE=/sys/class/thermal/thermal_zone0/temp
+                        ORIGINAL_TEMP=$(cat $TEMP_FILE)
+                        TEMP_C=$((ORIGINAL_TEMP/1000))
+                        echo "Cpu temperature is : $TEMP_C ˚C"
+	        }
+	        cpu_temp
 		read -n 1 -p "<Enter> for main menu"
 		menuprincipal
 		;;
