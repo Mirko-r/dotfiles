@@ -39,7 +39,7 @@ $> ./install.sh
 - <kbd>TheFuck</kbd> type fuck for correct the last command
 - <kbd>hstr</kbd> next gen history for bash 
 - <kbd>enhancd</kbd> next gen cd 
-- <hbd>inf</kbd> get system info
+- <kbd>inf</kbd> get system info
 <br>
 <br>
 
