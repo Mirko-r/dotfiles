@@ -23,6 +23,9 @@ shopt -s globstar
 # Case-sensitive globbing
 shopt -s nocaseglob
 
+# Save multi-line commands in history as a single line
+shopt -s cmdhist
+
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
@@ -115,6 +118,13 @@ alias rm='rm -i'
 # System information
 alias inf="chmod u+x .inf.sh && ./.inf.sh"
 
+# adding flags
+alias df='df -h'                          # human-readable sizes
+alias free='free -m'                      # show sizes in MB 
+
+# get error messages from journalctl
+alias jctl="journalctl -p 3 -xb"
+
 
 
 #================  EXPORTS  =================
@@ -150,6 +160,8 @@ if [ -f /etc/bash_completion/pip ]; then
   . /etc/bash_completion/pip
 fi
 
+#ignore upper and lowercase when TAB completion
+bind "set completion-ignore-case on"
 
 
 #===============  FEATURES CONFIG ================	
