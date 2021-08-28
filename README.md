@@ -38,8 +38,8 @@ $> ./install.sh
 - <kbd>bat</kbd> a cat clone with wings
 - <kbd>TheFuck</kbd> type fuck for correct the last command
 - <kbd>hstr</kbd> next gen history for bash 
-- <kbd>enhancd</kbd> next gen cd 
 - <kbd>inf</kbd> get system info
+- <kbd>power_settings</kbd> display all power settings
 <br>
 <br>
 
