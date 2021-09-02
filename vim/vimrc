@@ -1,9 +1,9 @@
 set encoding=UTF-8 nobomb	" Set encodig
+set number 			" Show line number
 set nocompatible		" be iMproved, required
 set wildmenu			" Better command-line completion		
 set completeopt=longest,menu	" Setting for wildmenu
 set autoindent			" Autoindent line
-set number			" Display line-number
 set clipboard=unnamed		" Use the OS clipboard
 set noerrorbells		" Disable error beeps
 set nostartofline		" Don't reset the cursor
@@ -30,8 +30,8 @@ set statusline+=%*
 set statusline+=%r%=[%{&encoding}\ %{&fileformat}\ %{strlen(&ft)?&ft:'none'}]\ %12.(%c:%l/%L%)
 
 " Show absolute line numbers in insert mode, relative line numbers otherwise
-autocmd InsertEnter * :set norelativenumber
 autocmd InsertLeave * :set relativenumber
+autocmd InsertEnter * :set norelativenumber
 
 filetype off			" required
 syntax on			" enable syntax higlight
