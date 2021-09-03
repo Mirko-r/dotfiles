@@ -30,7 +30,7 @@
 ```
 $> git clone https://github.com/Mirko-r/dotfiles.git
 $> cd bash
-$> cp */* $HOME
+$> mv */* $HOME
 ```
 
 ## Features
