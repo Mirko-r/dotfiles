@@ -117,7 +117,7 @@ alias mv='mv -i'
 alias rm='rm -i'
 
 # System information
-alias inf="chmod u+x .inf.sh && ./.inf.sh"
+alias inf="chmod u+x .bash_scripts/.inf.sh && ./.bash_scripts/.inf.sh"
 
 # adding flags
 alias df='df -h'                          # human-readable sizes
@@ -130,6 +130,7 @@ alias jctl="journalctl -p 3 -xb"
 
 #================  EXPORTS  =================
 
+# Colored Gcc errors and warnings
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 #set bat as manpager
