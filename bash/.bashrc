@@ -5,8 +5,6 @@
 # If not running interactively, don't do anything 
 [[ $- != *i* ]] && return
 
-
-
 #================  CONFIGS  ================
 
 # Autocorrect typos in path names when usign cd
@@ -28,6 +26,14 @@ shopt -s cmdhist
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+# Enable wayland globally
+if [[ -z $DISPLAY && $(tty) == /dev/tty1 && $XDG_SESSION_TYPE == tty ]]; then
+  MOZ_ENABLE_WAYLAND=1 QT_QPA_PLATFORM=wayland XDG_SESSION_TYPE=wayland exec dbus-run-session gnome-session
+fi
+
+# hide startx messages
+[[ $(fgconsole 2>/dev/null) == 1 ]] && exec startx -- vt1 &> /dev/null
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
