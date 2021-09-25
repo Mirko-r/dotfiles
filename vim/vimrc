@@ -36,6 +36,12 @@ autocmd InsertEnter * :set norelativenumber
 filetype off			" required
 syntax on			" enable syntax higlight
 
+" Set filettype to text for filetypes ending with .txt
+autocmd BufNewFile,BufRead *.txt setfiletype text
+
+" Enable soft-wrapping for text files
+autocmd FileType text,markdown,html,xhtml,eruby setlocal wrap linebreak nolist
+
 " Enable use of the mouse for all modes
 if has('mouse')
   set mouse=a
