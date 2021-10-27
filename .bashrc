@@ -193,7 +193,9 @@ if [[ $- =~ .*i.* ]]; then bind '"\C-xk": "\C-a hstr -k \C-j"'; fi
 
 eval $(thefuck --alias)
 
+# starship
 
+eval "$(starship init bash)"
 
 #================  FUNCTIONS  ================
 
