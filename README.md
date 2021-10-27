@@ -5,4 +5,4 @@
 
 - [Bash Config](./.bashrc)
 - [Neofetch Config](./.config/neofetch/config.conf)
-- [Vim Config](./etc/vim/vimrc)
+- [Vim Config](./etc/vimrc)
