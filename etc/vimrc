@@ -1,4 +1,5 @@
 set encoding=UTF-8 nobomb	" Set encodig
+set relativenumber		" Show relative numbers in normal mode
 set number 			" Show line number
 set nocompatible		" be iMproved, required
 set wildmenu			" Better command-line completion		
@@ -29,12 +30,11 @@ set statusline+=%#warningmsg#
 set statusline+=%*
 set statusline+=%r%=[%{&encoding}\ %{&fileformat}\ %{strlen(&ft)?&ft:'none'}]\ %12.(%c:%l/%L%)
 
-" Show absolute line numbers in insert mode, relative line numbers otherwise
-autocmd InsertLeave * :set relativenumber
+" Show absolute line numbers in insert mode
 autocmd InsertEnter * :set norelativenumber
+autocmd InsertLeave * :set relativenumber
 
-filetype off			" required
-syntax on			" enable syntax higlight
+syntax on
 
 " Set filettype to text for filetypes ending with .txt
 autocmd BufNewFile,BufRead *.txt setfiletype text
@@ -58,11 +58,14 @@ autocmd BufReadPost *
     \ |   exe "normal! g'\""
     \ | endif
 
-" set the runtime path to include Vundle and initialize
-set rtp+=/etc/vim/Vundle.vim
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
-call vundle#begin('/etc/vim/')
+"call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
