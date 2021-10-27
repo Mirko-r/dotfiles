@@ -1,4 +1,0 @@
-vagrant.local ansible_ssh_host=33.33.33.88 ansible_user_name=vagrant
-
-[test]
-vagrant.local
