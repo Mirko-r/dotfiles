@@ -122,9 +122,6 @@ alias cp="cp -i"
 alias mv='mv -i'
 alias rm='rm -i'
 
-# System information
-alias inf="chmod u+x .bash_scripts/inf.sh && ./.bash_scripts/inf.sh"
-
 # adding flags
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB 
