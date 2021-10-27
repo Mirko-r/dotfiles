@@ -5,4 +5,5 @@
 
 - [Bash Config](./.bashrc)
 - [Neofetch Config](./.config/neofetch/config.conf)
+- [Topgrade config](./.config/topgrade.toml)
 - [Vim Config](./etc/vimrc)
