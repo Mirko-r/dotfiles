@@ -6,6 +6,7 @@
 - [Bash Config](./.bashrc)
 - [Bpytop Config](./.config/bpytop/bpytop.conf)
 - [Neofetch Config](./.config/neofetch/config.conf)
+- [Pacman config](./etc/pacman.conf)
 - [Topgrade config](./.config/topgrade.toml)
 - [Vim Config](./etc/vimrc)
 - [Zsh config](./.zshrc)
