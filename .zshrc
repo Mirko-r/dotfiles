@@ -107,4 +107,7 @@ alias jctl="journalctl -p 3 -xb"
 # zshconfig
 alias zshconfig="vim ~/.zshrc"
 
+#Alacritty config
+alias alacrittyconfig="vim $HOME/.config/alacritty/alacritty.yml"
+
 eval "$(starship init zsh)"
