@@ -107,6 +107,12 @@ Plugin 'Raimondi/delimitMate'
 "Wakatime
 Plugin 'wakatime/vim-wakatime'
 
+"Coloscheme
+Plugin 'b4skyx/serenade'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+" set Coloscheme
+colorscheme serenade
