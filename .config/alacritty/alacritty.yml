@@ -1,4 +1,13 @@
+#     _    _                 _ _____ _______   __
+#    / \  | | __ _  ___ _ __(_)_   _|_   _\ \ / /
+#   / _ \ | |/ _` |/ __| '__| | | |   | |  \ V /
+#  / ___ \| | (_| | (__| |  | | | |   | |   | |
+# /_/   \_\_|\__,_|\___|_|  |_| |_|   |_|   |_|
+
 background_opacity: 0.8
+
+# Live config reload
+live_config_reload: true
 
 env:
   TERM: xterm-256color
@@ -8,6 +17,9 @@ window:
   
 cursor:
   style: Block
+  # If this is `true`, the cursor will be rendered as a hollow box when the
+  # window is not focused.
+  unfocused_hollow: true
 
 # Colors (Dracula)
 colors:
@@ -42,5 +54,9 @@ shell:
   program: /bin/zsh
   args:
     - --login
+
+mouse:
+  # If this is `true`, the cursor is temporarily hidden when typing.
+  hide_when_typing: true
 
 working_directory: None
