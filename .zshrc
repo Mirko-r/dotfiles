@@ -80,7 +80,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # Use ripgrep instead grep wich is a lot better
-alias grep="rg -p"
+alias grep="rg -p --stats -U"
 
 #Use exa that is better than ls
 alias ls="exa --icons --group-directories-first"
