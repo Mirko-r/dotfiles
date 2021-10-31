@@ -134,3 +134,8 @@ alias gp="git push"
 alias gs="git status -sb"
 
 eval "$(starship init zsh)"
+
+function mc (){
+	#create dir and cd into it
+	mkdir -p "$@" && cd "$@"
+}
