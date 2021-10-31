@@ -1,0 +1,14 @@
+[user]
+	name = Mirko Rovere
+	email = 04mirko@libero.it
+[core]
+	editor = vim
+[init]
+	defaultBranch = main
+[color]
+	ui = true
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+
