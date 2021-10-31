@@ -1,7 +1,7 @@
 set encoding=UTF-8 nobomb	" Set encodig
+set shortmess=atI 		"Disable the short message on vim start.
 set relativenumber		" Show relative numbers in normal mode
-set number 			" Show line number
-set nocompatible		" be iMproved, required
+set number 
 set wildmenu			" Better command-line completion		
 set completeopt=longest,menu	" Setting for wildmenu
 set autoindent			" Autoindent line
@@ -45,6 +45,10 @@ autocmd FileType text,markdown,html,xhtml,eruby setlocal wrap linebreak nolist
 " Enable use of the mouse for all modes
 if has('mouse')
   set mouse=a
+  set selection=exclusive "Mouse can only selects the block where ths cursor is on.
+  set selectmode=mouse,key
+  set mousehide "Hide mouse cursor on keyboard typing.
+  set mousemodel=popup "Right mouse button pops up a menu.
 endif
 
 " Backup, swap, undo
