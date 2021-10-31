@@ -23,12 +23,7 @@ set diffopt=filler 		" Add vertical spaces to keep right and left aligned
 set diffopt+=iwhite 		" Ignore whitespace changes (focus on code changes)
 set report=0			" Report the number of lines changed
 
-" status line
-set statusline=
-set statusline+=%f\ %2*%m\ %1*%h
-set statusline+=%#warningmsg#
-set statusline+=%*
-set statusline+=%r%=[%{&encoding}\ %{&fileformat}\ %{strlen(&ft)?&ft:'none'}]\ %12.(%c:%l/%L%)
+set statusline=\ %y%w%r\ %f\ %m%=%l/%L\ \|%3.c%(\ %)
 
 " Show absolute line numbers in insert mode
 autocmd InsertEnter * :set norelativenumber
