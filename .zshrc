@@ -43,10 +43,9 @@ source $ZSH/oh-my-zsh.sh
 export LANG=it_IT.UTF-8
 
 setopt PROMPT_SUBST ; PS1='[%n@%m %c$(__git_ps1 " (%s)")]\$ '
-
-# don't expand aliases _before_ completion has finished
-#   like: git comm-[tab]
-setopt complete_aliases
+setopt complete_aliases # don't espand aliases before completion has finished
+setopt autocd		# Automatically cd into typed directory.
+stty stop undef		# Disable ctrl-s to freeze terminal.
 
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
@@ -132,5 +131,6 @@ alias reload!='. ~/.zshrc'
 
 # git aliases
 alias gp="git push"
+alias gs="git status -sb"
 
 eval "$(starship init zsh)"
