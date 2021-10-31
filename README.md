@@ -22,5 +22,5 @@
 - [Tmux config](./.config/tmux/tmux.conf)
 - [Topgrade config](./.config/topgrade.toml)
 - [Vim Config](./etc/vimrc)
-  [vim](./vim.png)
+  ![vim](./vim.png)
 - [Zsh config](./.zshrc)
