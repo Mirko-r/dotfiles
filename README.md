@@ -11,7 +11,7 @@
  ░░░░░░  ░░░░░░     ░░    ░░   ░░ ░░░  ░░░░░░ ░░░░░░
 ```
 
-![dotfiles](https://raw.githubusercontent.com/Mirko-r/dotfiles/main/Schermata%20da%202021-10-31%2009-06-34.png)
+![dotfiles](https://raw.githubusercontent.com/Mirko-r/dotfiles/main/img/Schermata%20da%202021-10-31%2009-06-34.png)
 
 - [Alacritty config](./.config/alacritty/alacritty.yml)
 - [Bash Config](./.bashrc)
@@ -23,6 +23,6 @@
 - [Topgrade config](./.config/topgrade.toml)
 - [Vim Config](./etc/vimrc)
   
-  ![vim](./vim.png)
+  ![vim](./img/vim.png)
 
 - [Zsh config](./.zshrc)
