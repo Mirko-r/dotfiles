@@ -22,7 +22,7 @@ set showmode			" Show current mode
 set diffopt=filler 		" Add vertical spaces to keep right and left aligned
 set diffopt+=iwhite 		" Ignore whitespace changes (focus on code changes)
 set report=0			" Report the number of lines changed
-
+set t_Co=256
 set statusline=\ %y%w%r\ %f\ %m%=%l/%L\ \|%3.c%(\ %)
 
 " Show absolute line numbers in insert mode
@@ -51,11 +51,13 @@ set backupdir=/tmp
 set directory=/tmp
 set undodir=/tmp
 
-"Return to last edit position when opening files
-autocmd BufReadPost *
-    \ if line("'\"") >=1 && line("'\"") <= line("$") && &ft !~# 'commit'
-    \ |   exe "normal! g'\""
-    \ | endif
+" .sh file header
+function HeaderBash()
+	call setline(1, "#!/bin/bash")
+	normal G
+	normal o
+endf
+autocmd bufnewfile *.sh call HeaderBash()
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
