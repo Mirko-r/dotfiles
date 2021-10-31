@@ -86,8 +86,9 @@ alias grep="rg -p --stats -U"
 alias ls="exa --icons --group-directories-first"
 
 # some more ls aliases
-alias ll='ls  -alF'
-alias la='ls -a'
+alias ll='ls  -lh'
+alias la='ls -ah'
+alias lla='ls -lah'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
