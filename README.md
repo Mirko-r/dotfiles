@@ -1,3 +1,5 @@
+#Mirko's
+
 ```
       ██            ██     ████ ██  ██
      ░██           ░██    ░██░ ░░  ░██
@@ -9,7 +11,6 @@
  ░░░░░░  ░░░░░░     ░░    ░░   ░░ ░░░  ░░░░░░ ░░░░░░
 ```
 
-# Mirko's dotfiles
 ![dotfiles](https://raw.githubusercontent.com/Mirko-r/dotfiles/main/Schermata%20da%202021-10-31%2009-06-34.png)
 
 - [Alacritty config](./.config/alacritty/alacritty.yml)
