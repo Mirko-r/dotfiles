@@ -5,6 +5,7 @@
 
 - [Alacritty config](./.config/alacritty/alacritty.yml)
 - [Bash Config](./.bashrc)
+- [Bat config](./.config/bat/config)
 - [Bpytop Config](./.config/bpytop/bpytop.conf)
 - [Neofetch Config](./.config/neofetch/config.conf)
 - [Pacman config](./etc/pacman.conf)
