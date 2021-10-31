@@ -1,7 +1,12 @@
+#  _____    _
+# |__  /___| |__  _ __ ___
+#   / // __| '_ \| '__/ __|
+#  / /_\__ \ | | | | | (__
+# /____|___/_| |_|_|  \___|
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-#Print colored pacman ghost everytime open terminal
 $HOME/.scripts/pacman.sh
 
 # Path to your oh-my-zsh installation.
@@ -36,6 +41,8 @@ source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 export LANG=it_IT.UTF-8
+
+setopt PROMPT_SUBST ; PS1='[%n@%m %c$(__git_ps1 " (%s)")]\$ '
 
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
@@ -107,10 +114,13 @@ alias free='free -m'                      # show sizes in MB
 # get error messages from journalctl
 alias jctl="journalctl -p 3 -xb"
 
-# zshconfig
+# Zsh config
 alias zshconfig="vim ~/.zshrc"
 
-#Alacritty config
+# Alacritty config
 alias alacrittyconfig="vim $HOME/.config/alacritty/alacritty.yml"
+
+# Vim config
+alias vimconfig="vim /etc/vimrc"
 
 eval "$(starship init zsh)"
