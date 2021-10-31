@@ -4,7 +4,7 @@
 #  / ___ \| | (_| | (__| |  | | | |   | |   | |
 # /_/   \_\_|\__,_|\___|_|  |_| |_|   |_|   |_|
 
-background_opacity: 0.8
+background_opacity: 0.95
 
 # Live config reload
 live_config_reload: true
@@ -23,6 +23,17 @@ cursor:
 
 # Colors (Dracula)
 colors:
+
+  # Cursor color
+  cursor:
+    text: '0x44475a'
+    cursor: '0xf8f8f2'
+  
+  # Selection color
+  selection:
+    text: '0xf8f8f2'
+    background: '0x44475a'    
+  
   # Default colors
   primary:
     background: '#282a36'
@@ -54,6 +65,11 @@ shell:
   program: /bin/zsh
   args:
     - --login
+
+url:
+  launcher:
+    program: xdg-open
+    args: []
 
 mouse:
   # If this is `true`, the cursor is temporarily hidden when typing.
