@@ -20,6 +20,9 @@
   ![bat](./img/bat.png)
 
 - [Bpytop Config](./.config/bpytop/bpytop.conf)
+
+  ![bpytop](./img/bpytop.png)
+
 - [Neofetch Config](./.config/neofetch/config.conf)
 - [Pacman config](./etc/pacman.conf)
 - [Starship config](./.config/starship.toml)
