@@ -7,8 +7,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-$HOME/.scripts/pacman.sh
-
 # Path to your oh-my-zsh installation.
 export ZSH="/home/mirko/.oh-my-zsh"
 
@@ -128,6 +126,8 @@ alias reload!='. ~/.zshrc'
 alias gp="git push"
 alias gs="git status -sb"
 
+#install it from the Arch User Repository: shell-color-scripts
+colorscript random
 
 # HSTR configuration
 alias hh=hstr                    # hh to be alias for hstr
