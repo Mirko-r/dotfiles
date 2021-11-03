@@ -2,7 +2,7 @@
 #assume_yes = true
 
 # Disable specific steps - same options as the command line flag
-#disable = ["system", "emacs"]
+disable = ["gnome_shell_extensions"]
 
 # Ignore failures for these steps
 #ignore_failures = ["powershell"]
@@ -11,7 +11,7 @@
 #only = ["system", "emacs"]
 
 # Do not ask to retry failed steps (default: false)
-#no_retry = true
+no_retry = true
 
 # Run inside tmux
 run_in_tmux = true
@@ -57,7 +57,8 @@ run_in_tmux = true
 
 # Custom commands
 [commands]
-"Python Environment" = "pip3 list -o --format columns|  cut -d' ' -f1|xargs -n1 pip install -U"
+#"Python Environment" = "pip3 list -o --format columns|  cut -d' ' -f1|xargs -n1 pip install -U"
+"Vim plugins" = "vim +PluginUpdate +qall"
 
 [brew]
 #greedy_cask = true
