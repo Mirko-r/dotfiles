@@ -45,6 +45,11 @@ export LANG=it_IT.UTF-8
 setopt PROMPT_SUBST ; PS1='[%n@%m %c$(__git_ps1 " (%s)")]\$ '
 setopt complete_aliases # don't espand aliases before completion has finished
 setopt autocd		# Automatically cd into typed directory.
+setopt share_history # Share history between multiple shells
+# No Beep
+setopt no_beep
+setopt no_list_beep
+setopt no_hist_beep
 stty stop undef		# Disable ctrl-s to freeze terminal.
 
 # Compilation flags
@@ -63,6 +68,9 @@ export PATH=$PATH:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.emacs.d/bin
 
 #Default editor is doom-emacs of course
 export EDITOR='emacs'
+
+# terminal emulator
+export TERMINAL='alacritty'
 
 # Aliases
 
