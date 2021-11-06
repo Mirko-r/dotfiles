@@ -59,10 +59,10 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 # Custom path
-export PATH=$PATH:$HOME/.local/bin:$HOME/.cargo/bin
+export PATH=$PATH:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.emacs.d/bin
 
-#Default editor is vim of course
-export EDITOR='vim'
+#Default editor is doom-emacs of course
+export EDITOR='emacs'
 
 # Aliases
 
@@ -111,13 +111,10 @@ alias free='free -m'                      # show sizes in MB
 alias jctl="journalctl -p 3 -xb"
 
 # Zsh config
-alias zshconfig="vim ~/.zshrc"
+alias zshconfig="emacs ~/.zshrc"
 
 # Alacritty config
-alias alacrittyconfig="vim $HOME/.config/alacritty/alacritty.yml"
-
-# Vim config
-alias vimconfig="vim /etc/vimrc"
+alias alacrittyconfig="emacs $HOME/.config/alacritty/alacritty.yml"
 
 # Reload config
 alias reload!='. ~/.zshrc'
