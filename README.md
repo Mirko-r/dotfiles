@@ -24,6 +24,9 @@
   ![bpytop](./img/bpytop.png)
 
 - [Doom-emacs config](./.doom.d/)
+
+  ![doom](./img/doom-emacs.png)
+
 - [Neofetch Config](./.config/neofetch/config.conf)
 - [Pacman config](./etc/pacman.conf)
 - [Starship config](./.config/starship.toml)
