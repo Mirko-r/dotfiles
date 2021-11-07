@@ -28,6 +28,9 @@
   ![doom](./img/doom-emacs.png)
 
 - [Neofetch Config](./.config/neofetch/config.conf)
+
+  ![neofetch](./img/neofetch.png)
+
 - [Pacman config](./etc/pacman.conf)
 - [Starship config](./.config/starship.toml)
 - [Tmux config](./.config/tmux/tmux.conf)
