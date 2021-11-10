@@ -133,6 +133,9 @@ alias gs="git status -sb"
 #install it from the Arch User Repository: shell-color-scripts
 colorscript random
 
+#install it from the Arch User Repository: pfetch
+pfetch
+
 # HSTR configuration
 alias hh=hstr                    # hh to be alias for hstr
 setopt histignorespace           # skip cmds w/ leading space from history
