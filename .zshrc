@@ -72,6 +72,9 @@ export EDITOR='emacs'
 # terminal emulator
 export TERMINAL='alacritty'
 
+# ignore this in history
+export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
+
 # Aliases
 
 # enable color support of ls and also add handy aliases
@@ -130,11 +133,14 @@ alias reload!='. ~/.zshrc'
 alias gp="git push"
 alias gs="git status -sb"
 
-#install it from the Arch User Repository: shell-color-scripts
-colorscript random
+# ps
+alias psa="ps auxf | less"
+alias psgrep="ps aux | grep -v grep | grep -i -e VSZ -e"
+alias psmem='ps auxf | sort -nr -k 4 | less'
+alias pscpu='ps auxf | sort -nr -k 3 | less'
 
-#install it from the Arch User Repository: pfetch
-pfetch
+#install it from the Arch User Repository: shell-color-scripts ; pfetch
+colorscript random ; pfetch
 
 # HSTR configuration
 alias hh=hstr                    # hh to be alias for hstr

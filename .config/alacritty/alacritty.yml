@@ -22,6 +22,11 @@ cursor:
     blink-interval: 750
     unfocused_hollow: true
 
+bell:
+  animation: EaseOutExpo
+  color: '0xffffff'
+  duration: 0
+
 # Colors (Dracula)
 colors:
 
