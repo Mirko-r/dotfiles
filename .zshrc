@@ -31,7 +31,13 @@ plugins=(
 	git
 	zsh-autosuggestions
 	zsh-syntax-highlighting
+    autoupdate
 )
+
+#update non-core plugins
+# Uncomment the following line to change how often to auto-update (in days).
+export UPDATE_ZSH_DAYS=1
+
 # ZSH Autosuggestions
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#999'
 
@@ -93,10 +99,10 @@ alias grep="rg -p --stats -U"
 
 #Use exa that is better than ls
 alias ls="exa --icons --group-directories-first"
-alias ll='exa  -lh --icons --color=always --group-directories-first'
+alias ll='exa  -lbF --icons --color=always --group-directories-first'
+alias lla='exa -lbhHigUmuSa --icons --color=always --group-directories-first'
 alias la='exa -ah --icons --color=always --group-directories-first'
-alias lla='exa -lah --icons --color=always --group-directories-first'
-alias lt='exa -aT --color=always --group-directories-first | less' # tree listing
+alias lt='exa -aT --icons --color=always --group-directories-first | less' # tree listing
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -115,7 +121,7 @@ alias rm='rm -i'
 
 # adding flags
 alias df='df -h'                          # human-readable sizes
-alias free='free -m'                      # show sizes in MB 
+alias free='free -m'                      # show sizes in MB
 
 # get error messages from journalctl
 alias jctl="journalctl -p 3 -xb"
