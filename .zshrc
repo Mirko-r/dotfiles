@@ -100,9 +100,9 @@ alias grep="rg -p --stats -U"
 #Use exa that is better than ls
 alias ls="exa --icons --group-directories-first"
 alias ll='exa  -lbF --icons --color=always --group-directories-first'
-alias lla='exa -lbhHigUmuSa --icons --color=always --group-directories-first'
+alias lla='exa -lbhHigUmuSa --icons --time-style=long-iso --git --color-scale'
 alias la='exa -ah --icons --color=always --group-directories-first'
-alias lt='exa -aT --icons --color=always --group-directories-first | less' # tree listing
+alias lt='exa --tree --level=2 --icons --color=always --group-directories-first' # tree listing
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
