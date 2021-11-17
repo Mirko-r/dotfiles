@@ -1,0 +1,159 @@
+* {
+  min-height: 0;
+  font-size: 16px;
+  /* `otf-font-awesome` is required to be installed for icons */
+  font-family: "Dank Mono", "Font Awesome 5 Free", sans-serif;
+  border: none;
+  border-radius: 0;
+  /*font-weight: bold;*/
+}
+
+.horizontal {
+  padding: 2px;
+}
+
+/*.horizontal:nth-child(2) {*/
+/*padding: 0;*/
+/*}*/
+
+window#waybar {
+  color: #ffffff;
+  background-color: rgba(26, 27, 38, 0.95);
+  border-bottom: none;
+  transition-duration: 0.5s;
+  transition-property: background-color;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+#workspaces button {
+  margin: 0px 2px;
+  padding: 0.3rem;
+  color: #263640;
+  font-size: 10px;
+  border-radius: 0.4rem;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+#workspaces button:hover {
+  color: gray;
+  background: rgba(0, 1, 51, 0);
+  box-shadow: inherit;
+}
+
+#workspaces button.focused {
+  color: #33c5ba;
+  font-weight: bold;
+}
+
+#workspaces button.urgent {
+  color: red;
+  border: 1px solid red;
+}
+
+#cpu,
+#mpd,
+#tray,
+#mode,
+#clock,
+#memory,
+#network,
+#battery,
+#backlight,
+#pulseaudio,
+#temperature,
+#custom-logo,
+#custom-media,
+#idle_inhibitor,
+#custom-pacman-package-count {
+  margin: 0px 2px;
+  padding: 0rem 0.5rem;
+  color: #33c5ba;
+}
+
+#cpu,
+#tray,
+#clock,
+#memory,
+#battery,
+#network,
+#backlight,
+#temperature,
+#pulseaudio.sound,
+#custom-pacman-package-count {
+  margin-left: 30px;
+}
+
+@keyframes blink {
+  from {
+    border: 1px solid transparent;
+  }
+  to {
+    border: 1px solid red;
+  }
+}
+
+#battery.warning:not(.charging) {
+  color: orange;
+  background-color: transparent;
+}
+
+#battery.critical:not(.charging) {
+  color: #f53c3c;
+  border: 1px solid red;
+  border-radius: 0.4rem;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+label:focus {
+  background-color: #2e3440;
+}
+
+#backlight.value {
+  min-width: 20px;
+}
+
+#network.disconnected {
+  color: #ff0000;
+}
+
+#pulseaudio.muted.icon {
+  background-color: gray;
+  /*color: #2a5c45;*/
+}
+
+#custom-media {
+  min-width: 100px;
+  color: #2a5c45;
+  background-color: #66cc99;
+}
+
+#custom-media.custom-spotify {
+  background-color: #66cc99;
+}
+
+#custom-media.custom-vlc {
+  background-color: #ffa000;
+}
+
+#temperature.critical {
+  background-color: #eb4d4b;
+}
+
+#custom-logo {
+  font-size: 1.3em;
+}
+
+#clock {
+  color: gold;
+  border: 1px solid gold;
+  border-radius: 0.4rem;
+  padding: 5px 10px 2px 10px;
+}
+

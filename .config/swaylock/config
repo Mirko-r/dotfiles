@@ -1,0 +1,9 @@
+# Image
+image=/home/mirko/Immagini/satellite-tn1.png
+scaling=fill
+
+# Indicator
+indicator-caps-lock
+
+# Behavior
+show-failed-attempts

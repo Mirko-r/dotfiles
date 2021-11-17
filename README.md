@@ -27,11 +27,15 @@
 
   ![doom](./img/doom-emacs.png)
 
+- [Mako](./.config/mako/config)
+
 - [Neofetch Config](./.config/neofetch/config.conf)
 
   ![neofetch](./img/neofetch.png)
 
 - [Pacman config](./etc/pacman.conf)
+- [Sway](./.config/sway/config)
+- [Swaylock](./.config/swaylock/config)
 - [Starship config](./.config/starship.toml)
 - [Tmux config](./.config/tmux/tmux.conf)
 - [Topgrade config](./.config/topgrade.toml)
@@ -39,6 +43,8 @@
   
   ![vim](./img/vim.png)
 
+- [Waybar](./.config/waybar)
+- [Wofi](./.config/wofi)
 - [Zsh config](./.zshrc)
 
   ![zsh](./img/zsh.png)

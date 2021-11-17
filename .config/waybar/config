@@ -1,0 +1,121 @@
+[{
+    // "layer": "top", // Waybar at top layer
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    // "height": 20, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    // "exclusive": false,
+    // Choose the order of the modules
+    "modules-left": [
+        "custom/logo",
+        "sway/mode",
+        "sway/workspaces",
+    ],
+    "modules-center": [
+	"clock",
+    ],
+    "modules-right": [
+	"tray",
+	"network",
+        "pulseaudio#sound",
+        "pulseaudio#icon",
+	"backlight",
+        "temperature",
+        "battery"
+    ],
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+    },
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "{:%d %b %y | %H:%M:%S}",
+        "interval": 1,
+    },
+    "temperature": {
+        "critical-threshold": 80,
+        "format-critical": "{temperatureC}°C  {icon}",
+        "format": "{temperatureC}°C  {icon}",
+        "format-icons": ["", "", ""]
+    },
+    "backlight": {
+        "format": "{percent}% {icon}",
+        "format-icons": ["", ""],
+        "on-click": "ctl-backlight.waybar.sh up"
+    },
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}%  {icon}",
+        "format-charging": "{capacity}%  ",
+        "format-plugged": "{capacity}%  ",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "network": {
+        "format-wifi": "{bandwidthUpBits} <span color='limegreen'></span><span color='limegreen'></span> {bandwidthDownBits}   ",
+        "format-wifi": "",
+        "format-ethernet": "",
+        "format-linked": "(No IP) ",
+        "format-disconnected": "",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "interval": 1,
+        "signal": 1
+    },
+    "pulseaudio#sound": {
+        "format": "{volume}",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+    },
+    "pulseaudio#icon": {
+        "format": "{icon}",
+        "format-bluetooth": "{icon}",
+        "format-bluetooth-muted": " {icon}",
+        "format-muted": "",
+        "format-source-muted": "",
+        "on-click": "pactl set-sink-mute 0 toggle",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+    },
+
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": false,
+    },
+
+    "custom/media": {
+        "format": "{icon} {}",
+        "return-type": "json",
+        "max-length": 40,
+        "format-icons": {
+            "spotify": "",
+            "default": "🎜"
+        },
+        "escape": true,
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+    },
+
+    "custom/logo": {
+        "format": "⏼",
+	"on-click" : "wlogout"
+    }
+}]
+
