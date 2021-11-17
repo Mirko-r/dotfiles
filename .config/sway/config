@@ -4,23 +4,16 @@
 #
 # Read `man 5 sway` for a complete reference.
 
-font pango: SourceCodePro Medium 10
+##global
 
-### Variables
-#
-# Logo key. Use Mod1 for Alt.
 set $mod Mod4
-# Home row direction keys, like vim
-set $left h
-set $down j
-set $up k
-set $right l
-# Your preferred terminal emulator
+
+font pango: SourceCodePro Medium 10
+xwayland enable
+
+
 set $term alacritty
-# Your preferred application launcher
-# Note: pass the final command to swaymsg so that the resulting window can be opened
-# on the original workspace that the command was run on.
-set $menu wofi --show run
+set $browser firefox
 
 ### Appearance
 
@@ -31,12 +24,39 @@ output * bg $HOME/Immagini/kittyboard-dark.png fill
     client.focused          #ffffff #ffffff #ffffff #0066ff     #ffffff
     client.unfocused        #4080bf #4080bf #4080bf #4080bf     #4080bf
     client.urgent           #33ccff #33ccff #33ccff #33ccff     #33ccff
+	
+    # Gaps
+    gaps inner 10
+    gaps outer 4
+    smart_gaps on
+    default_border none
+    focus_follows_mouse yes
 
-	# Gaps
-	gaps inner 10
-	gaps outer 4
-	smart_gaps on
-	default_border pixel 3
+    #==== Disable window border ===
+    for_window [class="^.*"] border pixel 0
+    for_window [app_id="^.*"] border pixel 0
+
+    #=== Enable window floating ===
+    for_window [title="^(Picture-in-Picture)$"] floating enable
+    for_window [title="Copyng *"] floating enable
+    for_window [title="Moving *"] floating enable
+
+    #=== Fullscreen app ===
+    for_window [app_id="mpv"] fullscreen
+
+
+
+### Variables
+#
+# Home row direction keys, like vim
+set $left h
+set $down j
+set $up k
+set $right l
+# Your preferred application launcher
+# Note: pass the final command to swaymsg so that the resulting window can be opened
+# on the original workspace that the command was run on.
+set $menu wofi -Ii --lines=10 --show run
 
 ### Idle configuration
 exec swayidle -w \
@@ -198,6 +218,8 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+## F* keys config
+
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5% 
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5% 
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
@@ -205,6 +227,9 @@ bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%- 
 bindsym XF86MonBrightnessUp exec brightnessctl set +5% 
+
+# Take a Screenshot with the region select
+bindsym $mod+Shift+p exec grim -t jpeg -g "$(slurp)" ~/Immagini/$(date +%Y-%m-%d_%H-%m-%s).jpg
 
 #
 # Status Bar:
