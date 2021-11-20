@@ -58,7 +58,7 @@ run_in_tmux = true
 # Custom commands
 [commands]
 #"Python Environment" = "pip3 list -o --format columns|  cut -d' ' -f1|xargs -n1 pip install -U"
-"Vim" = "vim +PluginUpdate +qall"
+"Vim plugins" = "vim +PlginInstall +qa"
 
 [brew]
 #greedy_cask = true
@@ -85,7 +85,7 @@ run_in_tmux = true
 
 [npm]
 # Use sudo if the NPM directory isn't owned by the current user
-#use_sudo = true
+use_sudo = true
 
 [firmware]
 # Offer to update firmware; if false just check for and display available updates
@@ -93,4 +93,4 @@ upgrade = true
 
 [flatpak]
 # Use sudo for updating the system-wide installation
-#use_sudo = true
+use_sudo = true
