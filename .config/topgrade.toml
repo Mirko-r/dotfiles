@@ -58,7 +58,7 @@ run_in_tmux = true
 # Custom commands
 [commands]
 #"Python Environment" = "pip3 list -o --format columns|  cut -d' ' -f1|xargs -n1 pip install -U"
-"Vim plugins" = "vim +PlginInstall +qa"
+"Vim plugins" = "vim +PluginInstall +qa"
 
 [brew]
 #greedy_cask = true
