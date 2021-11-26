@@ -17,7 +17,7 @@ set $browser firefox
 
 ### Appearance
 
-output * bg $HOME/Immagini/kittyboard-dark.png fill
+output * bg $HOME/Immagini/hand_gruvbox_indexed.png fill
 
 # Window colors
     # Class                 border  Backgr  Text    indicator   child_border
@@ -44,8 +44,6 @@ output * bg $HOME/Immagini/kittyboard-dark.png fill
     #=== Fullscreen app ===
     for_window [app_id="mpv"] fullscreen
 
-
-
 ### Variables
 #
 # Home row direction keys, like vim
@@ -53,6 +51,7 @@ set $left h
 set $down j
 set $up k
 set $right l
+
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -82,6 +81,7 @@ exec swayidle -w \
 input * xkb_layout "it"
 
 ### Key bindings
+
 #
 # Basics:
 #
@@ -108,7 +108,8 @@ input * xkb_layout "it"
     bindsym $mod+Shift+c reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+    bindsym $mod+Shift+e exec wlogout 
+
 #
 # Moving around:
 #
@@ -128,6 +129,7 @@ input * xkb_layout "it"
     bindsym $mod+Shift+Down move down
     bindsym $mod+Shift+Up move up
     bindsym $mod+Shift+Right move right
+
 #
 # Workspaces:
 #
@@ -155,7 +157,7 @@ input * xkb_layout "it"
     bindsym $mod+Shift+0 move container to workspace number 10
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
-#
+
 # Layout stuff:
 #
     # You can "split" the current object of your focus with
@@ -180,6 +182,7 @@ input * xkb_layout "it"
 
     # Move focus to the parent container
     bindsym $mod+a focus parent
+
 #
 # Scratchpad:
 #
@@ -192,6 +195,7 @@ input * xkb_layout "it"
     # Show the next scratchpad window or hide the focused scratchpad window.
     # If there are multiple scratchpad windows, this command cycles through them.
     bindsym $mod+minus scratchpad show
+
 #
 # Resizing containers:
 #
@@ -215,21 +219,24 @@ mode "resize" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-
 bindsym $mod+r mode "resize"
 
 ## F* keys config
 
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5% 
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5% 
+## F1
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+## F2
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5% 
+## F3
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5% 
+## F4
 bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
-
+## F5
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%- 
+## F6
 bindsym XF86MonBrightnessUp exec brightnessctl set +5% 
-
-# Take a Screenshot with the region select
-bindsym $mod+Shift+p exec grim -t jpeg -g "$(slurp)" ~/Immagini/$(date +%Y-%m-%d_%H-%m-%s).jpg
+# Take a Screenshot with the region select (Stamp)
+bindsym Print exec grim -t jpeg -g "$(slurp)" ~/Immagini/$(date +%Y-%m-%d_%H-%m-%s).jpg
 
 #
 # Status Bar:
@@ -243,8 +250,10 @@ exec "swaymsg input 'type:touch' map_to_output eDP-1"
 
 exec GDK_BACKEND=wayland
 exec CLUTTER_BACKEND=wayland
+
 exec mako
 exec nm-applet --indicator
 exec --no-startup-id "i3altlayout"
 exec "/home/mirko/.cargo/bin/rot8"
+
 include /etc/sway/config.d/*
