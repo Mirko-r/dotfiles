@@ -43,6 +43,7 @@
   
   ![vim](./img/vim.png)
 
+- [Wallpapers](./wallpapers/)
 - [Waybar](./.config/waybar)
 - [Wofi](./.config/wofi)
 - [Zsh config](./.zshrc)
