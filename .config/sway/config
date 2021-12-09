@@ -259,5 +259,6 @@ exec mako
 exec nm-applet --indicator
 exec --no-startup-id "i3altlayout"
 exec "/home/mirko/.cargo/bin/rot8"
+exec "bash ./script/battery.sh&"
 
 include /etc/sway/config.d/*
