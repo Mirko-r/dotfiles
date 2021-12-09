@@ -17,7 +17,7 @@ set $browser firefox
 
 ### Appearance
 
-output * bg $HOME/Immagini/hand_gruvbox_indexed.png fill
+output * bg $HOME/Immagini/undefinetttd_-_Imgur4.jpg fill
 
 # Window colors
     # Class                 border  Backgr  Text    indicator   child_border
@@ -32,6 +32,7 @@ output * bg $HOME/Immagini/hand_gruvbox_indexed.png fill
     default_border none
     focus_follows_mouse yes
 
+# Window rules
     #==== Disable window border ===
     for_window [class="^.*"] border pixel 0
     for_window [app_id="^.*"] border pixel 0
@@ -40,9 +41,12 @@ output * bg $HOME/Immagini/hand_gruvbox_indexed.png fill
     for_window [title="^(Picture-in-Picture)$"] floating enable
     for_window [title="Copyng *"] floating enable
     for_window [title="Moving *"] floating enable
-
+    
     #=== Fullscreen app ===
     for_window [app_id="mpv"] fullscreen
+
+    #=== Disable swayidle if curent window is fullscreen
+    for_window [shell=".*"] inhibit_idle fullscreen
 
 ### Variables
 #

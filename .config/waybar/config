@@ -62,7 +62,7 @@
         "format-ethernet": "",
         "format-linked": "(No IP) ",
         "format-disconnected": "",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+	"format-alt": "UP: {bandwidthUpBits}, DOWN: {bandwidthDownBits}",
         "interval": 1,
         "signal": 1
     },
@@ -100,19 +100,6 @@
         "disable-scroll": true,
         "all-outputs": false,
     },
-
-    "custom/media": {
-        "format": "{icon} {}",
-        "return-type": "json",
-        "max-length": 40,
-        "format-icons": {
-            "spotify": "",
-            "default": "🎜"
-        },
-        "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-    },
-
     "custom/logo": {
         "format": "⏼",
 	"on-click" : "wlogout"
