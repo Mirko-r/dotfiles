@@ -1,4 +1,0 @@
-Name=Arch sway
-Exec=/usr/bin/sway
-Environment=wayland
-

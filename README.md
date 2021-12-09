@@ -33,6 +33,7 @@
 
   ![neofetch](./img/neofetch.png)
 
+- [Ranger config](./.config/ranger)
 - [Pacman config](./etc/pacman.conf)
 - [Sway](./.config/sway/config)
 - [Swaylock](./.config/swaylock/config)
