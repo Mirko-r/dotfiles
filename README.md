@@ -12,6 +12,19 @@
 ```
 
 ![dotfiles](https://raw.githubusercontent.com/Mirko-r/dotfiles/main/img/Schermata%20da%202021-10-31%2009-06-34.png)
+---
+
+These are the dots I use on my linux machine. I update my setup according to my feels and needs.
+
+| Program                             | Name                                                                                                                           |
+| :---                                | :---                                                                                                                           |
+| Linux Distribution                  | [Arch Linux](https://www.archlinux.org/)                                                                                       |
+| Window Manager                      |                                                                                   |
+| Bar                                 |                                                                                     |
+| Program Launcher                    |                                                                                   |
+| Code Editor                         | [Vim](https://www.vim.org/)                                                                                                     |
+| Shell                               | [zsh](https://www.zsh.org/)                                                                                                    |
+| Terminal Emulator                   | [Alacritty](https://github.com/alacritty/alacritty)                                                                                                 |
 
 - [Alacritty config](./.config/alacritty/alacritty.yml)
 - [Bash Config](./.bashrc)
