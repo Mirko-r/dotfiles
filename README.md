@@ -19,30 +19,32 @@ These are the dots I use on my linux machine. I update my setup according to my 
 | Program                             | Name                                                                                                                           |
 | :---                                | :---                                                                                                                           |
 | Linux Distribution                  | [Arch Linux](https://www.archlinux.org/)                                                                                       |
-| Window Manager                      |                                                                                   |
-| Bar                                 |                                                                                     |
-| Program Launcher                    |                                                                                   |
+| Window Manager                      | [SwayWm](https://swaywm.org/)                                                                                  |
+| Bar                                 | [Waybar](https://github.com/Alexays/Waybar)                                                                                    |
+| Program Launcher                    | [Wofi](https://github.com/tsujp/wofi)                                                                                 |
 | Code Editor                         | [Vim](https://www.vim.org/)                                                                                                     |
 | Shell                               | [zsh](https://www.zsh.org/)                                                                                                    |
 | Terminal Emulator                   | [Alacritty](https://github.com/alacritty/alacritty)                                                                                                 |
 
+## Preview
+
 - [Alacritty config](./.config/alacritty/alacritty.yml)
 - [Bash Config](./.bashrc)
-- [Bat config](./.config/bat/config)
+### [Bat config](./.config/bat/config)
 
   ![bat](./img/bat.png)
 
-- [Bpytop Config](./.config/bpytop/bpytop.conf)
+### [Bpytop Config](./.config/bpytop/bpytop.conf)
 
   ![bpytop](./img/bpytop.png)
 
-- [Doom-emacs config](./.doom.d/)
+### [Doom-emacs config](./.doom.d/)
 
   ![doom](./img/doom-emacs.png)
 
 - [Mako](./.config/mako/config)
 
-- [Neofetch Config](./.config/neofetch/config.conf)
+### [Neofetch Config](./.config/neofetch/config.conf)
 
   ![neofetch](./img/neofetch.png)
 
@@ -53,14 +55,14 @@ These are the dots I use on my linux machine. I update my setup according to my 
 - [Starship config](./.config/starship.toml)
 - [Tmux config](./.config/tmux/tmux.conf)
 - [Topgrade config](./.config/topgrade.toml)
-- [Vim Config](./etc/vimrc)
+### [Vim Config](./etc/vimrc)
   
   ![vim](./img/vim.png)
 
 - [Wallpapers](./wallpapers/)
 - [Waybar](./.config/waybar)
 - [Wofi](./.config/wofi)
-- [Zsh config](./.zshrc)
+### [Zsh config](./.zshrc)
 
   ![zsh](./img/zsh.png)
 
