@@ -30,6 +30,7 @@ These are the dots I use on my linux machine. I update my setup according to my 
 
 - [Alacritty config](./.config/alacritty/alacritty.yml)
 - [Bash Config](./.bashrc)
+
 ### [Bat config](./.config/bat/config)
 
   ![bat](./img/bat.png)
@@ -43,6 +44,7 @@ These are the dots I use on my linux machine. I update my setup according to my 
   ![doom](./img/doom-emacs.png)
 
 - [Mako](./.config/mako/config)
+- [Mpv](./.config/mpv)
 
 ### [Neofetch Config](./.config/neofetch/config.conf)
 
@@ -55,6 +57,7 @@ These are the dots I use on my linux machine. I update my setup according to my 
 - [Starship config](./.config/starship.toml)
 - [Tmux config](./.config/tmux/tmux.conf)
 - [Topgrade config](./.config/topgrade.toml)
+
 ### [Vim Config](./etc/vimrc)
   
   ![vim](./img/vim.png)
@@ -62,6 +65,7 @@ These are the dots I use on my linux machine. I update my setup according to my 
 - [Wallpapers](./wallpapers/)
 - [Waybar](./.config/waybar)
 - [Wofi](./.config/wofi)
+
 ### [Zsh config](./.zshrc)
 
   ![zsh](./img/zsh.png)
