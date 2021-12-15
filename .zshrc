@@ -6,7 +6,9 @@
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-
+if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
+  exec sway
+fi
 # Path to your oh-my-zsh installation.
 export ZSH="/home/mirko/.oh-my-zsh"
 
@@ -61,8 +63,6 @@ stty stop undef		# Disable ctrl-s to freeze terminal.
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
 
-export OPENCV_LOG_LEVEL=ERROR
-
 # Colored Gcc errors and warnings
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
@@ -70,10 +70,10 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 # Custom path
-export PATH=$PATH:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.emacs.d/bin
+export PATH=$PATH:$HOME/.local/bin:$HOME/.cargo/bin
 
 #Default editor is doom-emacs of course
-export EDITOR='emacs'
+export EDITOR='vim'
 
 # terminal emulator
 export TERMINAL='alacritty'
@@ -127,10 +127,10 @@ alias free='free -m'                      # show sizes in MB
 alias jctl="journalctl -p 3 -xb"
 
 # Zsh config
-alias zshconfig="emacs ~/.zshrc"
+alias zshconfig="vim ~/.zshrc"
 
 # Alacritty config
-alias alacrittyconfig="emacs $HOME/.config/alacritty/alacritty.yml"
+alias alacrittyconfig="vim $HOME/.config/alacritty/alacritty.yml"
 
 # Reload config
 alias reload!='. ~/.zshrc'
@@ -138,6 +138,10 @@ alias reload!='. ~/.zshrc'
 # git aliases
 alias gp="git push"
 alias gs="git status -sb"
+alias gc="git commit"
+alias gcm="git commit -m"
+alias ga="git add"
+alias gaa="git add -A"
 
 # ps
 alias psa="ps auxf | less"
