@@ -24,6 +24,7 @@ set diffopt+=iwhite 		" Ignore whitespace changes (focus on code changes)
 set report=0			" Report the number of lines changed
 set t_Co=256
 set statusline=\ %y%w%r\ %f\ %m%=%l/%L\ \|%3.c%(\ %)
+set linebreak			" Break line by words not by char
 
 " Show absolute line numbers in insert mode
 autocmd InsertEnter * :set norelativenumber

@@ -81,7 +81,7 @@ export TERMINAL='alacritty'
 # ignore this in history
 export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
 
-# Aliases
+# ======== Aliases
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -148,6 +148,9 @@ alias psa="ps auxf | less"
 alias psgrep="ps aux | grep -v grep | grep -i -e VSZ -e"
 alias psmem='ps auxf | sort -nr -k 4 | less'
 alias pscpu='ps auxf | sort -nr -k 3 | less'
+
+#view HTTP traffic
+alias sniff-wifi="sudo ngrep -d 'wlan0' -t '^(GET|POST) ' 'tcp and port 80'"
 
 #install it from the Arch User Repository: shell-color-scripts ; pfetch
 colorscript random ; pfetch
