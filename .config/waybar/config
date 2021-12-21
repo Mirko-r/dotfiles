@@ -102,7 +102,7 @@
     },
     "custom/logo": {
         "format": "⏼",
-	"on-click" : "wlogout"
+	"on-click" : "wlogout -p layer-shell"
     }
 }]
 
