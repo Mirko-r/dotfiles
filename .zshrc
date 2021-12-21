@@ -142,6 +142,7 @@ alias gc="git commit"
 alias gcm="git commit -m"
 alias ga="git add"
 alias gaa="git add -A"
+alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
 # ps
 alias psa="ps auxf | less"
@@ -151,6 +152,9 @@ alias pscpu='ps auxf | sort -nr -k 3 | less'
 
 #view HTTP traffic
 alias sniff-wifi="sudo ngrep -d 'wlan0' -t '^(GET|POST) ' 'tcp and port 80'"
+
+# discord runn better on arch with theese flags
+alias discord="LIBVA_DRIVER_NAME=i915 discord --ignore-gpu-blocklist --disable-features=UseOzonePlatform --enable-features=VaapiVideoDecoder --use-gl=desktop --enable-gpu-rasterization --enable-zero-copy"
 
 #install it from the Arch User Repository: shell-color-scripts ; pfetch
 colorscript random ; pfetch
