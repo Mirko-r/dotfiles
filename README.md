@@ -15,6 +15,7 @@
 ---
 
 These are the dots I use on my linux machine. I update my setup according to my feels and needs.
+
 ---
 
 ## My current config
