@@ -15,11 +15,14 @@
 ---
 
 These are the dots I use on my linux machine. I update my setup according to my feels and needs.
+---
+
+## My current config
 
 | Program                             | Name                                                                                                                           |
 | :---                                | :---                                                                                                                           |
-| Linux Distribution                  | [Arch Linux](https://www.archlinux.org/)                                                                                       |
-| Window Manager                      | [SwayWm](https://swaywm.org/)                                                                                  |
+| Linux Distribution                  | [Fedora Linux](https://getfedora.org/)                                                                                       |
+| Desktop environment               | [Gnome](https://www.gnome.org/)                                                                                  |
 | Bar                                 | [Waybar](https://github.com/Alexays/Waybar)                                                                                    |
 | Program Launcher                    | [Wofi](https://github.com/tsujp/wofi)                                                                                 |
 | Code Editor                         | [Vim](https://www.vim.org/)                                                                                                     |
@@ -38,6 +41,8 @@ These are the dots I use on my linux machine. I update my setup according to my 
 ### [Bpytop Config](./.config/bpytop/bpytop.conf)
 
   ![bpytop](./img/bpytop.png)
+
+- [Dnf](./etc/dnf/)
 
 ### [Doom-emacs config](./.doom.d/)
 
@@ -65,6 +70,7 @@ These are the dots I use on my linux machine. I update my setup according to my 
 - [Wallpapers](./wallpapers/)
 - [Waybar](./.config/waybar)
 - [Wofi](./.config/wofi)
+- [Zathura](./.config/zathura)
 
 ### [Zsh config](./.zshrc)
 
