@@ -68,7 +68,7 @@ These are the dots I use on my linux machine. I update my setup according to my 
   
   ![vim](./img/vim.png)
 
-- [Wallpapers](./wallpapers/)
+- [Wallpapers](https://github.com/Mirko-r/Wallpapers)
 - [Waybar](./.config/waybar)
 - [Wofi](./.config/wofi)
 - [Zathura](./.config/zathura)
