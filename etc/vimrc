@@ -63,11 +63,8 @@ autocmd bufnewfile *.sh call HeaderBash()
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
 set rtp+=/etc/vim/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+call vundle#begin('/etc/vim/')
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
@@ -114,7 +111,7 @@ Plugin 'b4skyx/serenade'
 " Minimap
 Plugin 'wfxr/minimap.vim'
 
-let g:minimap_width = 30
+let g:minimap_width = 25
 let g:minimap_auto_start = 1
 let g:minimap_auto_start_win_enter = 1
 let g:minimap_highlight_range = 1
@@ -123,5 +120,4 @@ let g:minimap_highlight_range = 1
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-" set Coloscheme
 colorscheme serenade
