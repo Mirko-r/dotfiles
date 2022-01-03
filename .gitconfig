@@ -11,4 +11,7 @@
 	added = yellow
 	changed = green
 	untracked = cyan
-
+[alias]
+	co = commit
+	com = commit -m
+	log = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit

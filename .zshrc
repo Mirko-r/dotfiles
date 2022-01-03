@@ -16,7 +16,7 @@ export ZSH="/home/mirko/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="dracula"
+ZSH_THEME="fino"
 
 # Uncomment the following line to use case-sensitive completion.
 CASE_SENSITIVE="true"
@@ -33,7 +33,6 @@ plugins=(
 	git
 	zsh-autosuggestions
 	zsh-syntax-highlighting
-    autoupdate
 )
 
 #update non-core plugins
@@ -75,9 +74,6 @@ export PATH=$PATH:$HOME/.local/bin:$HOME/.cargo/bin
 #Default editor is doom-emacs of course
 export EDITOR='vim'
 
-# terminal emulator
-export TERMINAL='alacritty'
-
 # ignore this in history
 export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
 
@@ -85,7 +81,6 @@ export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias dir='dir --color=auto'
     alias vdir='vdir --color=auto'
     alias diff='diff --color=auto'
@@ -98,11 +93,11 @@ fi
 alias grep="rg -p --stats -U"
 
 #Use exa that is better than ls
-alias ls="exa --icons --group-directories-first"
-alias ll='exa  -lbF --icons --color=always --group-directories-first'
-alias lla='exa -lbhHigUmuSa --icons --time-style=long-iso --git --color-scale'
-alias la='exa -ah --icons --color=always --group-directories-first'
-alias lt='exa --tree --level=2 --icons --color=always --group-directories-first' # tree listing
+alias ls="exa --group-directories-first"
+alias ll='exa  -lbF --color=always --group-directories-first'
+alias lla='exa -lbhHigUmuSa --time-style=long-iso --git --color-scale'
+alias la='exa -ah --color=always --group-directories-first'
+alias lt='exa --tree --level=2 --color=always --group-directories-first' # tree listing
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -129,9 +124,6 @@ alias jctl="journalctl -p 3 -xb"
 # Zsh config
 alias zshconfig="vim ~/.zshrc"
 
-# Alacritty config
-alias alacrittyconfig="vim $HOME/.config/alacritty/alacritty.yml"
-
 # Reload config
 alias reload!='. ~/.zshrc'
 
@@ -142,22 +134,12 @@ alias gc="git commit"
 alias gcm="git commit -m"
 alias ga="git add"
 alias gaa="git add -A"
-alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
 # ps
 alias psa="ps auxf | less"
 alias psgrep="ps aux | grep -v grep | grep -i -e VSZ -e"
 alias psmem='ps auxf | sort -nr -k 4 | less'
 alias pscpu='ps auxf | sort -nr -k 3 | less'
-
-#view HTTP traffic
-alias sniff-wifi="sudo ngrep -d 'wlan0' -t '^(GET|POST) ' 'tcp and port 80'"
-
-# discord runn better on arch with theese flags
-alias discord="LIBVA_DRIVER_NAME=i915 discord --ignore-gpu-blocklist --disable-features=UseOzonePlatform --enable-features=VaapiVideoDecoder --use-gl=desktop --enable-gpu-rasterization --enable-zero-copy"
-
-#install it from the Arch User Repository: shell-color-scripts ; pfetch
-colorscript random ; pfetch
 
 # HSTR configuration
 alias hh=hstr                    # hh to be alias for hstr
