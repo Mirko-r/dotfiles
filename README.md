@@ -18,6 +18,10 @@ These are the dots I use on my linux machine. I update my setup according to my 
 
 ---
 
+## [Custom Gnome folder icons](./.local/share/icons)
+
+---
+
 ## My current config
 
 | Program                             | Name                                                                                                                           |
