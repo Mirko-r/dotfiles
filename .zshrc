@@ -33,7 +33,6 @@ plugins=(
 	git
 	zsh-autosuggestions
 	zsh-syntax-highlighting
-	shellfirm
 )
 
 #update non-core plugins
@@ -94,10 +93,10 @@ fi
 alias grep="rg -p --stats -U"
 
 #Use exa that is better than ls
-alias ls="exa --group-directories-first"
-alias ll='exa  -lbF --color=always --group-directories-first'
-alias lla='exa -lbhHigUmuSa --time-style=long-iso --git --color-scale'
-alias la='exa -ah --color=always --group-directories-first'
+alias ls="exa --group-directories-first --header"
+alias ll='exa  -lbF --color=always --group-directories-first --header'
+alias lla='exa -lbhHigUmuSa --time-style=long-iso --git --color-scale --header'
+alias la='exa -ah --color=always --group-directories-first --header'
 alias lt='exa --tree --level=2 --color=always --group-directories-first' # tree listing
 
 # Add an "alert" alias for long running commands.  Use like so:
