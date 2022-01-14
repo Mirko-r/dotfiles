@@ -25,6 +25,8 @@ set report=0			" Report the number of lines changed
 set t_Co=256
 set statusline=\ %y%w%r\ %f\ %m%=%l/%L\ \|%3.c%(\ %)
 set linebreak			" Break line by words not by char
+set splitbelow      		" Opens new windows below, not above
+set splitright      		" Open new vertical split windows to the right of the current one, not the left
 
 " Show absolute line numbers in insert mode
 autocmd InsertEnter * :set norelativenumber
