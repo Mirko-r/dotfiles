@@ -2,7 +2,7 @@
 #assume_yes = true
 
 # Disable specific steps - same options as the command line flag
-disable = ["gnome_shell_extensions"]
+#disable = ["gnome_shell_extensions"]
 
 # Ignore failures for these steps
 #ignore_failures = ["powershell"]
@@ -38,8 +38,7 @@ run_in_tmux = true
 #max_concurrency = 5
 # Additional git repositories to pull
 #repos = [
-#    "~/src/*/",
-#    "~/.config/something"
+#    "~/Progetti*"
 #]
 
 # Don't pull the predefined git repos
@@ -58,7 +57,6 @@ run_in_tmux = true
 # Custom commands
 [commands]
 #"Python Environment" = "pip3 list -o --format columns|  cut -d' ' -f1|xargs -n1 pip install -U"
-"Vim plugins" = "vim +PluginInstall +qa"
 
 [brew]
 #greedy_cask = true
@@ -81,7 +79,7 @@ run_in_tmux = true
 # Causes Topgrade to rename itself during the run to allow package managers
 # to upgrade it. Use this only if you installed Topgrade by using a package
 # manager such as Scoop to Cargo
-#self_rename = true
+self_rename = true
 
 [npm]
 # Use sudo if the NPM directory isn't owned by the current user
