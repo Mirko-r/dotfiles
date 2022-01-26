@@ -134,6 +134,11 @@ alias psgrep="ps aux | grep -v grep | grep -i -e VSZ -e"
 alias psmem='ps auxf | sort -nr -k 4 | less'
 alias pscpu='ps auxf | sort -nr -k 3 | less'
 
+#curl
+alias cl='curl -L'			#follow redirects
+alias clo='curl -L -O'			#follow redirects, download as original name
+alias clhead='curl -D - -so /dev/null'	#see only response header from a get request
+
 #================  BASH COMPLETION  ==============
 
 # enable programmable completion features (you don't need to enable
@@ -163,4 +168,4 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 #set bat as manpager
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
-export PATH="$PATH:/usr/local/bin:/home/mirko/.cargo/bin"
+export PATH="$PATH:/usr/local/bin:/home/mriko/.cargo/bin"
