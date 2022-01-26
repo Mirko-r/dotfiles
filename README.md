@@ -19,15 +19,8 @@ These are the dots I use on my linux machine. I update my setup according to my 
 ---
 ## Other
 
-## [cleaner.sh](./cleaner.sh) : 
-Simple script for cleaning Linux
-
 ## pen disable touchscreen :
 Contains a script and a service (which must be enabled of course) for disabling the touchscreen when the Surface Pen is hovering on the screen. Useful for improved palm rejection.
-
-## [renamer.sh](./renamer.sh) :
-Bash script to rename files to a pattern of consecutive numbers
-### change the .jpg extension to what you want
 
 ## [git undo](./usr/local/bin/git-undo) :
 Undoes your last commit but keep the changes in place
