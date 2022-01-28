@@ -118,10 +118,34 @@ Plugin 'wfxr/minimap.vim'
 
 let g:minimap_width = 25
 let g:minimap_auto_start = 1
-let g:minimap_auto_start_win_enter = 1
+let g:minimap_auto_start_win_enter = 1qa
 let g:minimap_highlight_range = 1
 
-" All of your Plugins must be added before the following line
+"Tree explorer
+Plugin 'preservim/nerdtree'
+
+" Start NERDTree. If a file is specified, move the cursor to its window.
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
+
+" When there are only nerdtree and minimap, close all
+autocmd bufenter * if (winnr("$") == 2 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | qa | endif
+
+"NerdTree devicons
+Plugin 'ryanoasis/vim-devicons'
+
+" loading the plugin
+let g:webdevicons_enable = 1
+
+" adding the flags to NERDTree
+let g:webdevicons_enable_nerdtree = 1
+
+" whether or not to show the nerdtree brackets around flags
+let g:webdevicons_conceal_nerdtree_brackets = 1
+
+let g:WebDevIconsOS = 'Linux'
+
+"All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
