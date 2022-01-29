@@ -22,8 +22,12 @@ These are the dots I use on my linux machine. I update my setup according to my 
 ## pen disable touchscreen :
 Contains a script and a service (which must be enabled of course) for disabling the touchscreen when the Surface Pen is hovering on the screen. Useful for improved palm rejection.
 
-## [git undo](./usr/local/bin/git-undo) :
-Undoes your last commit but keep the changes in place
+## pen-disable touch :
+Disable touch when usign pen 
+in bin/ and systemd/
+
+## [cleaner.sh](./cleaner.sh) :
+system cleaner script
 
 ## [Custom Gnome folder icons](./.local/share/icons)
 
