@@ -1,4 +1,7 @@
 #!/bin/bash
+# feed() Save a feed in bookmarks ex: feed http://www.archlinux.org/feeds/news/ archnews
+# deef() Read news from a bookmarks ex: deef archnews
+
 if [ ! -n "$FEED_BOOKMARKS" ]; then export FEED_BOOKMARKS=$HOME/Bookmarks; fi
 if [ ! -d "$FEED_BOOKMARKS" ]; then mkdir -p $FEED_BOOKMARKS; fi
 
