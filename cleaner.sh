@@ -69,10 +69,24 @@ dnfClean(){
 	sudo dnf clean dbcache
 }
 
+aptClean(){
+	echo -e "\n${bold}Cleaning apt / apt-get file${reset}"
+	sudo apt clean
+	sudo apt -s clean
+	sudo apt clean all
+	sudo apt autoremove
+	sudo apt-get clean
+	sudo apt-get -s clean
+	sudo apt-get clean all
+	sudo apt-get autoclean
+}
+
 if exists pacman; then
 	pacmanClean
 elif exists dnf; then
 	dnfClean	
+elif exist apt; then
+	aptClean
 fi
 
 echo -e "\n${bold}Clean the cache in your $HOME directory ${reset}"
