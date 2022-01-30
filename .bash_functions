@@ -1,12 +1,12 @@
 #!/bin/bash
-# feed() Save a feed in bookmarks ex: feed http://www.archlinux.org/feeds/news/ archnews
-# deef() Read news from a bookmarks ex: deef archnews
+# bookmarks-add() Save a feed in bookmarks ex: feed http://www.archlinux.org/feeds/news/ archnews
+# bookmarks-read() Read news from a bookmarks ex: deef archnews
 # mkdir() Create a dir and cd into it
 
 if [ ! -n "$FEED_BOOKMARKS" ]; then export FEED_BOOKMARKS=$HOME/Bookmarks; fi
 if [ ! -d "$FEED_BOOKMARKS" ]; then mkdir -p $FEED_BOOKMARKS; fi
 
-feed() {
+bookmarks-add() {
 	if [ ! -d $FEED_BOOKMARKS ]; then mkdir $FEED_BOOKMARKS; fi
 
 	if [ ! -n "$1" ]; then
@@ -51,7 +51,7 @@ feed() {
 	fi
 }
 
-deef() {
+bookmarks-read() {
 	if test -n "$1"; then
 		if [ ! -r "$FEED_BOOKMARKS/$1" ]; then
 			echo -e "\\n \\e[01;31mBookmark \\e[01;36m\\e[04m$1\\e[00m\\e[01;31m not found.\\e[00m\\n\\n \\e[04mType:\\e[00m\\n\\n   \\e[01;37m\$ deef\\e[00m (without arguments)\\n\\n to get the complete list of all currently saved bookmarks.\\n";
