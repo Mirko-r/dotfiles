@@ -50,7 +50,7 @@ pacmanClean(){
 
 	echo -e "\n${bold}Removing orphaned packages${reset}"
 
-	sudo pacman -Rns $(pacman -Qtdq)
+	sudo pacman -Rns "$(pacman -Qtdq)"
 
 	echo -e "\n${bold}Removing cache of non installed packages${reset}"
 
@@ -59,7 +59,7 @@ pacmanClean(){
 
 dnfClean(){
 	echo -e "\n${bold}Cleaning old kernel version${reset}"
-	sudo dnf remove $(dnf repoquery --installonly --latest-limit=-2 -q)
+	sudo dnf remove "$(dnf repoquery --installonly --latest-limit=-2 -q)"
 
 	echo -e "\n${bold}Cleaning Fedora version cache${reset}"
 	sudo dnf system-upgrade clean
