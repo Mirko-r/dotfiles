@@ -139,7 +139,7 @@ alias cl='curl -L'			#follow redirects
 alias clo='curl -L -O'			#follow redirects, download as original name
 alias clhead='curl -D - -so /dev/null'	#see only response header from a get request
 
-#================  BASH COMPLETION  ==============
+#================  LOAD SOURCES  ==============
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -157,6 +157,11 @@ if [ -f /etc/bash_completion/pip ]; then
   . /etc/bash_completion/pip
 fi
 
+# load bash functions
+if [ -f ~/.bash_functions ]; then
+. ~/.bash_functions
+fi
+
 #ignore upper and lowercase when TAB completion
 bind "set completion-ignore-case on"
 
@@ -169,3 +174,18 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 export PATH="$PATH:/usr/local/bin:/home/mriko/.cargo/bin"
+
+# HSTR configuration - add this to ~/.bashrc
+alias hh=hstr                    # hh to be alias for hstr
+export HSTR_CONFIG=hicolor       # get more colors
+shopt -s histappend              # append new history items to .bash_history
+export HISTCONTROL=ignorespace   # leading space hides commands from history
+export HISTFILESIZE=10000        # increase history file size (default is 500)
+export HISTSIZE=${HISTFILESIZE}  # increase history size (default is 500)
+# ensure synchronization between bash memory and history file
+export PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}"
+# if this is interactive shell, then bind hstr to Ctrl-r (for Vi mode check doc)
+if [[ $- =~ .*i.* ]]; then bind '"\C-r": "\C-a hstr -- \C-j"'; fi
+# if this is interactive shell, then bind 'kill last command' to Ctrl-x k
+if [[ $- =~ .*i.* ]]; then bind '"\C-xk": "\C-a hstr -k \C-j"'; fi
+
