@@ -1,6 +1,7 @@
 #!/bin/bash
 # feed() Save a feed in bookmarks ex: feed http://www.archlinux.org/feeds/news/ archnews
 # deef() Read news from a bookmarks ex: deef archnews
+# mkdir() Create a dir and cd into it
 
 if [ ! -n "$FEED_BOOKMARKS" ]; then export FEED_BOOKMARKS=$HOME/Bookmarks; fi
 if [ ! -d "$FEED_BOOKMARKS" ]; then mkdir -p $FEED_BOOKMARKS; fi
@@ -70,4 +71,9 @@ deef() {
 		done;
 		echo -e "\\n \\e[04mSee also\\e[00m\\n\\n   \\e[01;37m\$ feed\\e[00m\\n";
 	fi;
+}
+
+mkcd() {
+	mkdir $1
+	cd $1
 }
