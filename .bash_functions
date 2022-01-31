@@ -63,7 +63,7 @@ bookmarks-read() {
 			return 1;
 		fi
 		echo -e "\\n\\t\\e[01;37m==> \\e[01;31m$url\\e[01;37m <==\\e[00m"
-		feed "$url";
+		 bookmarks-add "$url";
 	else
 		echo -e "\\n \\e[04mUsage\\e[00m\\n\\n   \\e[01;37m\$ deef \\e[01;31m<bookmark>\\e[00m\\n\\n \\e[04mCurrently saved bookmarks\\e[00m\\n";
 		for i in $(find $FEED_BOOKMARKS -maxdepth 1 -type f);
