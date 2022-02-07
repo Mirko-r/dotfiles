@@ -4,7 +4,6 @@
 #  / ___ \| | (_| | (__| |  | | | |   | |   | |
 # /_/   \_\_|\__,_|\___|_|  |_| |_|   |_|   |_|
 
-background_opacity: 0.80
 
 # Live config reload
 live_config_reload: true
@@ -12,15 +11,15 @@ live_config_reload: true
 env:
   TERM: xterm-256color
 
-window:
-  decorations: none
-
 cursor:
   style:
     shape: Beam
     blinking: on
     blink-interval: 750
     unfocused_hollow: true
+
+window:
+  opacity: 0.80
 
 bell:
   animation: EaseOutExpo
@@ -70,7 +69,9 @@ colors:
 shell:
   program: /bin/zsh
   args:
-    - --login
+    - -l
+    - -c
+    - "tmux attach || tmux"
 
 url:
   launcher:

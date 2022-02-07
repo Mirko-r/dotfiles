@@ -1,16 +1,9 @@
-#  _____    _
-# |__  /___| |__  _ __ ___
-#   / // __| '_ \| '__/ __|
-#  / /_\__ \ | | | | | (__
-# /____|___/_| |_|_|  \___|
-
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
-  exec sway
+if [[ -z $DISPLAY && $(tty) == /dev/tty1 && $XDG_SESSION_TYPE == tty ]]; then
+	  MOZ_ENABLE_WAYLAND=1 QT_QPA_PLATFORM=wayland XDG_SESSION_TYPE=wayland exec dbus-run-session gnome-session
 fi
+
 # Path to your oh-my-zsh installation.
-export ZSH="/home/mirko/.oh-my-zsh"
+export ZSH="/home/mriko/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -77,6 +70,8 @@ export EDITOR='vim'
 # ignore this in history
 export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
 
+export TERM="screen-256color"
+
 # ======== Aliases
 
 # enable color support of ls and also add handy aliases
@@ -97,7 +92,7 @@ alias ls="exa --group-directories-first --header"
 alias ll='exa  -lbF --color=always --group-directories-first --header'
 alias lla='exa -lbhHigUmuSa --time-style=long-iso --git --color-scale --header'
 alias la='exa -ah --color=always --group-directories-first --header'
-alias lt='exa --tree --level=2 --color=always --group-directories-first' # tree listing
+alias lt='exa --tree --level=3 --color=always --group-directories-first' # tree listing
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -153,3 +148,4 @@ function mc (){
 	#create dir and cd into it
 	mkdir -p "$@" && cd "$@"
 }
+
