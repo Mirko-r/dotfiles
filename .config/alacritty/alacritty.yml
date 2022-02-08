@@ -7,6 +7,7 @@
 
 # Live config reload
 live_config_reload: true
+dynamic_title: true
 
 env:
   TERM: xterm-256color
@@ -19,7 +20,9 @@ cursor:
     unfocused_hollow: true
 
 window:
-  opacity: 0.80
+  opacity: 0.90
+
+gtk_theme_variant: dark
 
 bell:
   animation: EaseOutExpo

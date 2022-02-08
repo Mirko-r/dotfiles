@@ -128,6 +128,8 @@ Plugin 'preservim/nerdtree'
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
 
+let NERDTreeShowHidden=1
+
 " When there are only nerdtree and minimap, close all
 autocmd bufenter * if (winnr("$") == 2 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | qa | endif
 
