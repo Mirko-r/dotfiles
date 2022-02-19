@@ -70,6 +70,8 @@ export EDITOR='vim'
 # ignore this in history
 export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
 
+export MOZ_USE_XINPUT2="1"		# Mozilla smooth scrolling/touchpads.
+
 export TERM="screen-256color"
 
 # ======== Aliases
@@ -93,6 +95,9 @@ alias ll='exa  -lbF --color=always --group-directories-first --header'
 alias lla='exa -lbhHigUmuSa --time-style=long-iso --git --color-scale --header'
 alias la='exa -ah --color=always --group-directories-first --header'
 alias lt='exa --tree --level=3 --color=always --group-directories-first' # tree listing
+
+#CD
+alias ..="cd .."
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
