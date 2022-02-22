@@ -24,6 +24,7 @@ zstyle ':completion:*' file-sort modification # sort file on tab completion
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
 	git
+	git-open
 	zsh-autosuggestions
 	zsh-syntax-highlighting
 )
@@ -128,7 +129,7 @@ alias zshconfig="vim ~/.zshrc"
 alias reload!='. ~/.zshrc'
 
 # git aliases
-alias gp="git push"
+alias push="git push"
 alias gs="git status -sb"
 alias gc="git commit"
 alias gcm="git commit -m"
