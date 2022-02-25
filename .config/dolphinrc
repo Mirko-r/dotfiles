@@ -1,0 +1,37 @@
+MenuBar=Disabled
+
+[CompactMode]
+FontWeight=50
+
+[DetailsMode]
+FontWeight=50
+
+[General]
+BrowseThroughArchives=true
+RememberOpenedTabs=false
+ShowFullPath=true
+ShowFullPathInTitlebar=true
+ShowSelectionToggle=false
+ShowZoomSlider=false
+Version=201
+ViewPropsTimestamp=2022,2,21,16,8,43.397
+
+[IconsMode]
+FontWeight=50
+
+[KPropertiesDialog]
+DP-1 Height 1920x1080=472
+DP-1 Width 1920x1080=438
+
+[MainWindow]
+DP-1 Height 1920x1080=595
+DP-1 Width 1920x1080=1139
+DP-1 Window-Maximized 1920x1080=true
+MenuBar=Disabled
+ToolBarsMovable=Disabled
+
+[Notification Messages]
+ConfirmDelete=true
+
+[PreviewSettings]
+Plugins=

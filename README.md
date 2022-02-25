@@ -60,6 +60,7 @@ system cleaner script
 
   ![bpytop](./img/bpytop.png)
 
+- [Dolphin](./.config/dolphinrc)
 - [Dnf](./etc/dnf/)
 
 ### [Doom-emacs config](./.doom.d/)
