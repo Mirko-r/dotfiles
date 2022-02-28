@@ -67,6 +67,7 @@ system cleaner script
 
   ![doom](./img/doom-emacs.png)
 
+- [Latte dock](./.config/latte/Frosty.layout.latte)
 - [Mako](./.config/mako/config)
 - [Mpv](./.config/mpv)
 
