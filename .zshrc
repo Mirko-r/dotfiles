@@ -3,7 +3,7 @@ if [[ -z $DISPLAY && $(tty) == /dev/tty1 && $XDG_SESSION_TYPE == tty ]]; then
 fi
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/mriko/.oh-my-zsh"
+export ZSH="/home/mirko/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -24,7 +24,6 @@ zstyle ':completion:*' file-sort modification # sort file on tab completion
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
 	git
-	git-open
 	zsh-autosuggestions
 	zsh-syntax-highlighting
 )
@@ -129,12 +128,14 @@ alias zshconfig="vim ~/.zshrc"
 alias reload!='. ~/.zshrc'
 
 # git aliases
-alias push="git push"
+alias gp="git push"
 alias gs="git status -sb"
 alias gc="git commit"
 alias gcm="git commit -m"
 alias ga="git add"
 alias gaa="git add -A"
+alias git-versiontree="git log --graph --pretty=format:'%C(auto) %h | %s | %an | %ar%d'"
+alias git-fco="git commit --fixup <SHA-1>"
 
 # ps
 alias psa="ps auxf | less"
