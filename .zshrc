@@ -135,7 +135,7 @@ alias gcm="git commit -m"
 alias ga="git add"
 alias gaa="git add -A"
 alias git-versiontree="git log --graph --pretty=format:'%C(auto) %h | %s | %an | %ar%d'"
-alias git-fco="git commit --fixup <SHA-1>"
+alias git-fco="git commit --fixup"
 
 # ps
 alias psa="ps auxf | less"
