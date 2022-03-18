@@ -39,10 +39,8 @@ system cleaner script
 
 | Program                             | Name                                                                                                                           |
 | :---                                | :---                                                                                                                           |
-| Linux Distribution                  | [Arch ](https://archlinux.org/)                                                                                       |
+| Linux Distribution                  | [Gentoo](https://gentoo.org/)                                                                                       |
 | Desktop environment                 | [Gnome](https://www.gnome.org/)                                                                                  |
-| Bar                                 | [Waybar](https://github.com/Alexays/Waybar)                                                                                    |
-| Program Launcher                    | [Wofi](https://github.com/tsujp/wofi)                                                                                 |
 | Code Editor                         | [Vim](https://www.vim.org/)                                                                                                     |
 | Shell                               | [zsh](https://www.zsh.org/)                                                                                                    |
 | Terminal Emulator                   | [Alacritty](https://github.com/alacritty/alacritty)                                                                                                 |
@@ -75,8 +73,9 @@ system cleaner script
 
   ![neofetch](./img/neofetch.png)
 
-- [Ranger config](./.config/ranger)
 - [Pacman config](./etc/pacman.conf)
+- [Portage config](./etc/portage/make.conf)
+- [Ranger config](./.config/ranger)
 - [Sway](./.config/sway/config)
 - [Swaylock](./.config/swaylock/config)
 - [Starship config](./.config/starship.toml)
