@@ -74,9 +74,6 @@ call vundle#begin('/etc/vim/')
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" Completor
-Plugin 'maralla/completor.vim'
-
 " Whenever cursor jumps some distance or moves between windows, it will flash so you can see where it is.
 Plugin 'danilamihailov/beacon.nvim'
 
