@@ -96,9 +96,6 @@ alias lla='exa -lbhHigUmuSa --time-style=long-iso --git --color-scale --header'
 alias la='exa -ah --color=always --group-directories-first --header'
 alias lt='exa --tree --level=3 --color=always --group-directories-first' # tree listing
 
-#CD
-alias ..="cd .."
-
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
@@ -146,7 +143,7 @@ alias pscpu='ps auxf | sort -nr -k 3 | less'
 # HSTR configuration
 alias hh=hstr                    # hh to be alias for hstr
 setopt histignorespace           # skip cmds w/ leading space from history
-export HSTR_CONFIG=hicolor       # get more colors
+export HSTR_CONFIG=hicolor,case-sensitive       # get more colors with case-sensitive search
 bindkey -s "\C-r" "\C-a hstr -- \C-j"     # bind hstr to Ctrl-r (for Vi mode check doc)
 
 eval "$(starship init zsh)"
