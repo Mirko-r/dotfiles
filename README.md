@@ -31,6 +31,9 @@ in bin/ and systemd/
 ## [cleaner.sh](./cleaner.sh) :
 system cleaner script
 
+## [gentoo-update.sh](./gentoo-update.sh) :
+Gentoo system updater
+
 ## [Custom Gnome folder icons](./.local/share/icons)
 
 ---
