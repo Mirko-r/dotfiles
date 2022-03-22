@@ -72,8 +72,6 @@ export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
 
 export MOZ_USE_XINPUT2="1"		# Mozilla smooth scrolling/touchpads.
 
-export TERM="screen-256color"
-
 # ======== Aliases
 
 # enable color support of ls and also add handy aliases
@@ -147,6 +145,7 @@ export HSTR_CONFIG=hicolor,case-sensitive       # get more colors with case-sens
 bindkey -s "\C-r" "\C-a hstr -- \C-j"     # bind hstr to Ctrl-r (for Vi mode check doc)
 
 eval "$(starship init zsh)"
+eval $(thefuck --alias)
 
 function mc (){
 	#create dir and cd into it
