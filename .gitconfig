@@ -1,5 +1,5 @@
 [user]
-	name = Mirko Rovere
+	name = Mirko-r
 	email = 04mirko@libero.it
 [core]
 	editor = vim
@@ -11,7 +11,7 @@
 	added = yellow
 	changed = green
 	untracked = cyan
-[alias]
-	co = commit
-	com = commit -m
-	log = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[pager]
+	log = diff-highlight | less
+	show = diff-highlight | less
+	diff = diff-highlight | less
