@@ -81,12 +81,46 @@ aptClean(){
 	sudo apt-get autoclean
 }
 
+gentooClean(){
+    echo -e "\n${bold} Cleaning /var/tmp, /tmp, etc... ${reset}"
+    
+    sudo du -sh /var/tmp/portage/
+    sudo du -sh /var/tmp/ccache/
+    sudo du -sh /var/tmp/binpkgs/
+    sudo du -sh /var/tmp/genkernel/
+    sudo du -sh /tmp/
+    sudo du -sh /var/cache/genkernel/
+
+    if ask "Do you want to remove ?" Y; then
+	    rm -rf /var/tmp/portage/*
+        rm -rf /var/tmp/ccache/*
+        rm -rf /var/tmp/binpkgs/*
+        rm -rf /var/tmp/genkernel/*
+        rm -rf /tmp/*
+        rm -rf /var/cache/genkernel/*
+	    echo -e "${bold}Done!${reset}\n"
+    else
+	    echo -e "\n${bold}Aborting...${reset}\n"
+    fi
+
+    echo -e "${bold} Cleaning unused libraries and programs... ${reset}"
+    emerge -av --depclean
+    emerge -cav
+
+    echo -e "\n${bold} Checking for obselete packages... ${reset}"
+    eix-test-obsolete
+
+    
+}
+
 if exists pacman; then
 	pacmanClean
 elif exists dnf; then
 	dnfClean	
-elif exist apt; then
+elif exists apt; then
 	aptClean
+elif exists emerge; then
+    gentooClean
 fi
 
 echo -e "\n${bold}Clean the cache in your $HOME directory ${reset}"
@@ -114,6 +148,22 @@ if ask "Do you want to remove ?" Y; then
 else
 	echo -e "\n${bold}Aborting...${reset}\n"
 
+fi
+
+echo -e "\n${bold}Clean the trash${reset}"
+
+sudo du -sh  $HOME/.local/share/Trash/
+
+sudo du -sh /root/.local/share/Trash/
+
+echo ""
+
+if ask "Do you want to remove ?" Y; then
+    rm -rf /home/*/.local/share/Trash/*/** &> /dev/null
+    rm -rf /root/.local/share/Trash/*/** &> /dev/null
+    echo -e "${bold}Done!${reset}\n"
+else
+    echo -e "\n${bold}Aborting...${reset}\n"
 fi
 
 echo -e "\n${bold}Clean temp folders${reset}"
