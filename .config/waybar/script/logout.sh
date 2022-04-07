@@ -1,0 +1,22 @@
+waylogout \
+	--hide-cancel \
+	--screenshots \
+	--font="Baloo 2" \
+	--effect-blur=7x5 \
+	--indicator-thickness=20 \
+	--ring-color=888888aa \
+	--inside-color=88888866 \
+	--text-color=eaeaeaaa \
+	--line-color=00000000 \
+	--ring-selection-color=33cc33aa \
+	--inside-selection-color=33cc3366 \
+	--text-selection-color=eaeaeaaa \
+	--line-selection-color=00000000 \
+	--lock-command="swaylock" \
+	--logout-command="logout" \
+	--suspend-command="suspend" \
+	--hibernate-command="hibernate" \
+	--poweroff-command="poweroff" \
+	--reboot-command="reboot" \
+	--switch-user-command="switch" \
+	--selection-label
