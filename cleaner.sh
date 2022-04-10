@@ -50,9 +50,9 @@ pacmanClean(){
 
 	echo -e "\n${bold}Removing orphaned packages${reset}"
 
-	sudo pacman -Rns "$(pacman -Qtdq)"
+    sudo pacman -Rs $(pacman -Qtdq)
 
-	echo -e "\n${bold}Removing cache of non installed packages${reset}"
+    echo -e "\n${bold}Removing cache of non installed packages${reset}"
 
 	sudo paccache -r -u
 }
