@@ -43,7 +43,9 @@ Gentoo system updater
 | Program                             | Name                                                                                                                           |
 | :---                                | :---                                                                                                                           |
 | Linux Distribution                  | [Arch](https://archlinux.org/)                                                                                       |
-| Desktop environment                 | [Sway](https://swaywm.org/)                                                                                  |
+| WM			              | [Sway](https://swaywm.org/)                                                                                  |
+| StatusBar			      | [Waybar](https://github.com/Alexays/Waybar)                                                                                  |
+| Menu		                      | [Rofi](https://github.com/davatorium/rofi)                                                                                  |
 | Code Editor                         | [Vim](https://www.vim.org/)                                                                                                     |
 | Shell                               | [zsh](https://www.zsh.org/)                                                                                                    |
 | Terminal Emulator                   | [Alacritty](https://github.com/alacritty/alacritty)                                                                                                 |
