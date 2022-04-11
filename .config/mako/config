@@ -1,6 +1,12 @@
-default-timeout=2000
+# mako
 
-font=Roboto 11
-background-color=#002b33
-border-color=#005566
-border-radius=10
+font=JetBrains Mono 14
+
+background-color=#191818
+text-color=#d2d2d2
+
+border-color=#474343
+border-radius=6
+
+height=700
+width=500
