@@ -19,7 +19,7 @@ set $browser firefox
 
 ### Appearance
 
-output * bg $HOME/Immagini/gnu-linux.png fill
+output * bg $HOME/Immagini/cyborg_gruv.png fill
 
 # Window colors
     # Class                 border  Backgr  Text    indicator   child_border
@@ -264,5 +264,5 @@ exec mako
 exec nm-applet --indicator
 exec "/home/mirko/.cargo/bin/rot8"
 exec "~/.config/sway/script/battery.sh&"
-
+exec_always --no-startup-id workstyle &> /tmp/workstyle.log
 include /etc/sway/config.d/*
