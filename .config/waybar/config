@@ -1,108 +1,79 @@
-[{
-    // "layer": "top", // Waybar at top layer
-    // "position": "bottom", // Waybar position (top|bottom|left|right)
-    // "height": 20, // Waybar height (to be removed for auto height)
-    // "width": 1280, // Waybar width
-    // "exclusive": false,
-    // Choose the order of the modules
-    "modules-left": [
-        "custom/logo",
-        "sway/mode",
-        "sway/workspaces",
-    ],
-    "modules-center": [
-	"clock",
-    ],
-    "modules-right": [
-	"tray",
-	"network",
-        "pulseaudio#sound",
-        "pulseaudio#icon",
-	"backlight",
-        "temperature",
-        "battery"
-    ],
-    "sway/mode": {
-        "format": "<span style=\"italic\">{}</span>"
-    },
-    "tray": {
-        "icon-size": 21,
-        "spacing": 10
-    },
-    "clock": {
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "{:%d %b %y | %H:%M:%S}",
-        "interval": 1,
-    },
-    "temperature": {
-        "critical-threshold": 80,
-        "format-critical": "{temperatureC}°C  {icon}",
-        "format": "{temperatureC}°C  {icon}",
-        "format-icons": ["", "", ""]
-    },
-    "backlight": {
-        "format": "{percent}% {icon}",
-        "format-icons": ["", ""],
-        "on-click": "ctl-backlight.waybar.sh up"
-    },
+{
+	"layer": "top",
+	"modules-left": ["custom/launcher","cpu","memory","network","tray"],
+	"modules-center": ["sway/workspaces"],
+	"modules-right": ["custom/updates","backlight","pulseaudio","clock", "battery","custom/power"],
+	
+	"pulseaudio": {
+		"tooltip": false,
+		"scroll-step": 5,
+		"format": "{icon} {volume}%",
+		"format-muted": "{icon} {volume}%",
+		"on-click":"pactl set-sink-mute @DEFAULT_SINK@ toggle",
+		"format-icons": {
+			"default": ["", "", ""]
+		}
+	},
+	"sway/workspaces": {
+        	"disable-scroll": true,
+        	"all-outputs": false,
+   	},
+	"network": {
+		"tooltip": false,
+		"format-wifi": "  {essid}",
+		"format-ethernet": ""
+	},
+	"backlight": {
+		"tooltip": false,
+		"format": " {}%",
+		"interval":1,
+        "on-scroll-up": "light -A 5",
+		"on-scroll-down": "light -U 5"
+	},
     "battery": {
         "states": {
             "good": 95,
             "warning": 30,
-            "critical": 15
+            "critical": 20
         },
-        "format": "{capacity}%  {icon}",
-        "format-charging": "{capacity}%  ",
-        "format-plugged": "{capacity}%  ",
+        "format": "{icon}  {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{time} {icon}",
         "format-icons": ["", "", "", "", ""]
     },
-    "network": {
-        "format-wifi": "{bandwidthUpBits} <span color='limegreen'></span><span color='limegreen'></span> {bandwidthDownBits}   ",
-        "format-wifi": "",
-        "format-ethernet": "",
-        "format-linked": "(No IP) ",
-        "format-disconnected": "",
-	"format-alt": "UP: {bandwidthUpBits}, DOWN: {bandwidthDownBits}",
-        "interval": 1,
-        "signal": 1
+	"tray":{
+		"icon-size":18,
+		"spacing": 10
+	},
+    "clock": {
+       "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "{:%d %b %y | %H:%M:%S}",
+        "interval": 1, 
     },
-    "pulseaudio#sound": {
-        "format": "{volume}",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-        },
+    "cpu": {
+        "interval": 15,
+        "format": " {}%",
+        "max-length": 10
     },
-    "pulseaudio#icon": {
-        "format": "{icon}",
-        "format-bluetooth": "{icon}",
-        "format-bluetooth-muted": " {icon}",
-        "format-muted": "",
-        "format-source-muted": "",
-        "on-click": "pactl set-sink-mute 0 toggle",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-        },
+    "memory": {
+        "interval": 30,
+        "format": " {}%",
+        "max-length": 10
     },
-
-    "sway/workspaces": {
-        "disable-scroll": true,
-        "all-outputs": false,
+    "custom/launcher":{
+        "format": " ",
+        "on-click": "rofi -show drun",
     },
-    "custom/logo": {
-        "format": "⏼",
+    "custom/power":{
+        "format": " ",
 	"on-click" : "~/.config/waybar/script/logout.sh"
-    }
-}]
-
+    },
+    "custom/updates":{
+        "format": "{} Update(s)",
+        "exec": "checkupdates | wc -l",
+        "exec-if": "[[ $(checkupdates | wc -l) != 0 ]]",
+        "interval": 15,
+        "on-click": "alacritty -e paru -Syu && notify-send 'The system has been updated' "
+    },
+}

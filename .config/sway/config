@@ -60,7 +60,7 @@ set $right l
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu wofi -Ii --lines=10 --show run
+set $menu rofi -show drun 
 
 ### Idle configuration
 exec swayidle -w \
@@ -107,7 +107,7 @@ input * xkb_layout "it"
     floating_modifier $mod normal
 
     # Lock screen
-    bindsym $mod+l exec swaylock -C /home/mirko/.config/swaylock/config
+    bindsym Mod1+l exec swaylock -C /home/mirko/.config/swaylock/config
 
     # Reload the configuration file
     bindsym $mod+Shift+c reload
@@ -123,6 +123,12 @@ input * xkb_layout "it"
     bindsym $mod+Down focus down
     bindsym $mod+Up focus up
     bindsym $mod+Right focus right
+
+    # Or use $mod+[hjlk]
+    bindsym $mod+h focus left
+    bindsym $mod+j focus down
+    bindsym $mod+k focus up
+    bindsym $mod+l focus right
 
     # Move the focused window with the same, but add Shift
     bindsym $mod+Shift+$left move left
@@ -231,7 +237,7 @@ bindsym $mod+r mode "resize"
 ## F1
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 ## F2
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5% 
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 ## F3
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5% 
 ## F4
@@ -252,14 +258,11 @@ bar {
 }
 
 exec "swaymsg input 'type:touch' map_to_output eDP-1"
-
 exec GDK_BACKEND=wayland
 exec CLUTTER_BACKEND=wayland
-
 exec mako
 exec nm-applet --indicator
-exec --no-startup-id "i3altlayout"
 exec "/home/mirko/.cargo/bin/rot8"
-exec "bash ./script/battery.sh&"
+exec "~/.config/sway/script/battery.sh&"
 
 include /etc/sway/config.d/*

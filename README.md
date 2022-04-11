@@ -42,8 +42,8 @@ Gentoo system updater
 
 | Program                             | Name                                                                                                                           |
 | :---                                | :---                                                                                                                           |
-| Linux Distribution                  | [Gentoo](https://gentoo.org/)                                                                                       |
-| Desktop environment                 | [Gnome](https://www.gnome.org/)                                                                                  |
+| Linux Distribution                  | [Arch](https://archlinux.org/)                                                                                       |
+| Desktop environment                 | [Sway](https://swaywm.org/)                                                                                  |
 | Code Editor                         | [Vim](https://www.vim.org/)                                                                                                     |
 | Shell                               | [zsh](https://www.zsh.org/)                                                                                                    |
 | Terminal Emulator                   | [Alacritty](https://github.com/alacritty/alacritty)                                                                                                 |
@@ -79,6 +79,7 @@ Gentoo system updater
 - [Pacman config](./etc/pacman.conf)
 - [Portage config](./etc/portage/make.conf)
 - [Ranger config](./.config/ranger)
+- [Rofi config](./.config/rofi/config.rasi)
 - [Sway](./.config/sway/config)
 - [Swaylock](./.config/swaylock/config)
 - [Starship config](./.config/starship.toml)
