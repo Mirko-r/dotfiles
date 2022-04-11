@@ -95,6 +95,7 @@ Gentoo system updater
 - [Wallpapers](https://github.com/Mirko-r/Wallpapers)
 - [Waybar](./.config/waybar)
 - [Wofi](./.config/wofi)
+- [Workstyle](./config/workstyle/config.toml)
 - [Zathura](./.config/zathura)
 
 ### [Zsh config](./.zshrc)
