@@ -1,10 +1,12 @@
 [user]
 	name = Mirko-r
 	email = 04mirko@libero.it
+[github]
+	user = Mirko-r
 [core]
 	editor = vim
 [init]
-	defaultBranch = main
+	defaultBranch = master
 [color]
 	ui = true
 [color "status"]
