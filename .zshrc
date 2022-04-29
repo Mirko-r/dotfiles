@@ -89,7 +89,7 @@ alias ls="exa --icons --group-directories-first --header"
 alias ll='exa  -lbF --icons --color=always --group-directories-first --header'
 alias lla='exa -lbhHigUmuSa --icons --time-style=long-iso --git --color-scale --header'
 alias la='exa -ah --icons --color=always --group-directories-first --header'
-alias lt='exa --tree --level=3 --icons --color=always --group-directories-first' # tree listing
+alias lt='exa --tree --level=3 --icons --color=always --group-directories-first; echo -e "\nFile totali: $(find ./ -type f | wc -l)"' # tree listing
 
 # Make cat better with bat
 alias cat="bat"
