@@ -17,9 +17,10 @@
 "firefox" = ""
 "chrome" = ""
 "file manager" = ""
+"xplorer" = ""
 "libreoffice calc" = ""
 "libreoffice writer" = ""
-"xournalpp" = ""
+"xournalpp" = "X++"
 "libreoffice" = ""
 "vim" = ""
 "gthumb" = ""
@@ -31,6 +32,9 @@
 "music" = ""
 "disk usage" = ""
 ".pdf" = ""
+"vscode" = ""
+"visual studio code" = ""
+"code" = ""
 
 [other]
 fallback_icon = "🤨"

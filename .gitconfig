@@ -13,7 +13,5 @@
 	added = yellow
 	changed = green
 	untracked = cyan
-[pager]
-	log = diff-highlight | less
-	show = diff-highlight | less
-	diff = diff-highlight | less
+[help]
+	autocorrect = 15

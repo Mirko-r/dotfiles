@@ -13,10 +13,9 @@ waylogout \
 	--text-selection-color=eaeaeaaa \
 	--line-selection-color=00000000 \
 	--lock-command="swaylock" \
-	--logout-command="logout" \
+	--logout-command="swaymsg exit" \
 	--suspend-command="suspend" \
 	--hibernate-command="hibernate" \
 	--poweroff-command="poweroff" \
 	--reboot-command="reboot" \
-	--switch-user-command="switch" \
 	--selection-label
