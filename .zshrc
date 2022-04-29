@@ -1,6 +1,11 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/home/mirko/.oh-my-zsh"
 
+## EXPORTS
+
+export MOZ_USE_XINPUT2=1
+export MOZ_ENABLE_WAYLAND=1
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -56,7 +61,7 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 # Custom path
-export PATH=$PATH:$HOME/.local/bin:$HOME/.cargo/bin
+export PATH=$PATH:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.local/share/gem/ruby/3.0.0/bin
 
 #Default editor is doom-emacs of course
 export EDITOR='vim'
@@ -111,10 +116,10 @@ alias reload!='. ~/.zshrc'
 # git aliases
 alias gp="git push"
 alias gs="git status -sb"
-alias gc="git commit"
 alias gcm="git commit -m"
-alias ga="git add"
 alias gaa="git add -A"
+alias gacm="git add -A; git commit -m"
+alias gl="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
 alias git-versiontree="git log --graph --pretty=format:'%C(auto) %h | %s | %an | %ar%d'"
 alias git-fco="git commit --fixup"
 
@@ -126,6 +131,7 @@ alias pscpu='ps auxf | sort -nr -k 3 | less'
 
 #Net 
 alias iip="curl --max-time 10 -w '\n' http://ident.me"
+alias ping="gping"
 
 eval "$(starship init zsh)"
 eval $(thefuck --alias)
