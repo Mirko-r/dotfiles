@@ -89,13 +89,17 @@ Gentoo system updater
 - [Topgrade config](./.config/topgrade.toml)
 
 ### [Vim Config](./etc/vimrc)
-  
+
   ![vim](./img/vim.png)
 
 - [Wallpapers](https://github.com/Mirko-r/Wallpapers)
 - [Waybar](./.config/waybar)
 - [Wofi](./.config/wofi)
-- [Workstyle](./.config/workstyle/config.toml)
+
+### [Workstyle](./.config/workstyle/config.toml)
+
+ ![workstyle](./img/workstyle.jpg)
+
 - [Zathura](./.config/zathura)
 
 ### [Zsh config](./.zshrc)
