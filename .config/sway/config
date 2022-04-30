@@ -177,11 +177,6 @@ input * xkb_layout "it"
     bindsym $mod+b splith
     bindsym $mod+v splitv
 
-    # Switch the current container between different layout styles
-    bindsym $mod+s layout stacking
-    bindsym $mod+w layout tabbed
-    bindsym $mod+e layout toggle split
-
     # Make the current focus fullscreen
     bindsym $mod+f fullscreen
 
@@ -257,7 +252,9 @@ bar {
 	swaybar_command waybar
 }
 
-exec "swaymsg input 'type:touch' map_to_output eDP-1"
+# Rotate touchscreen when the screen rotate
+swaymsg input type:touch map_to_output eDP-1
+
 exec GDK_BACKEND=wayland
 exec CLUTTER_BACKEND=wayland
 exec mako
