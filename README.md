@@ -100,7 +100,9 @@ Gentoo system updater
 
  ![workstyle](./img/workstyle.jpg)
 
-- [Zathura](./.config/zathura)
+### [Zathura](./.config/zathura)
+
+ ![zathura](./img/zathura.jpg)
 
 ### [Zsh config](./.zshrc)
 
