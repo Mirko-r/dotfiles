@@ -1,0 +1,29 @@
+# Oh-my-zsh spcific
+export ZSH="/home/mirko/.oh-my-zsh"
+export UPDATE_ZSH_DAYS=1
+
+# Wayland specific
+export MOZ_USE_XINPUT2=1
+export MOZ_ENABLE_WAYLAND=1
+
+# System language
+export LANG=it_IT.UTF-8
+
+# Compilation flags
+export ARCHFLAGS="-arch x86_64"
+
+# Colored Gcc errors and warnings
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+
+#set bat as manpager
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
+# Custom path
+export PATH=$PATH:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.local/share/gem/ruby/3.0.0/bin:~/.emacs.d/bin
+
+#Default editor is doom-emacs of course
+export EDITOR='vim'
+
+# ignore this in history
+export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
+
