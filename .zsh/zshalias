@@ -56,9 +56,10 @@ alias psgrep="ps aux | grep -v grep | grep -i -e VSZ -e"
 alias psmem='ps auxf | sort -nr -k 4 | less'
 alias pscpu='ps auxf | sort -nr -k 3 | less'
 
-#Net 
+# Network  
 alias iip="curl --max-time 10 -w '\n' http://ident.me"
 alias ping="gping"
+alias ipa="ip a | pcregrep -M -o '^[^\t:]+:([^\n]|\n\t)*UP'"	# Get active interface
 
 #Pacman
 alias broswe-pkgs="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"

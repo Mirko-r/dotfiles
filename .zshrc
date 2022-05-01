@@ -51,5 +51,12 @@ else
     print "404 ~/.zsh/zshenv not found."
 fi
 
+# Load functions
+if [ -f ~/.zsh/zshfunctions ]; then
+    source ~/.zsh/zshfunctions
+else
+    print "404 ~/.zsh/zshfunctions not found"
+fi
+
 eval "$(starship init zsh)"
 eval $(thefuck --alias)
