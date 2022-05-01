@@ -1,5 +1,4 @@
 # Oh-my-zsh spcific
-export ZSH="/home/mirko/.oh-my-zsh"
 export UPDATE_ZSH_DAYS=1
 
 # Wayland specific

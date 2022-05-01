@@ -12,7 +12,7 @@ fi
 alias grep="rg -p --stats -U"
 
 #Use exa that is better than ls
-alias ls="exa --icons --group-directories-first --header"
+alias ls="exa --icons --color=always --group-directories-first --header"
 alias ll='exa  -lbF --icons --color=always --group-directories-first --header'
 alias lla='exa -lbhHigUmuSa --icons --time-style=long-iso --git --color-scale --header'
 alias la='exa -ah --icons --color=always --group-directories-first --header'
