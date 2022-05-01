@@ -61,7 +61,7 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 # Custom path
-export PATH=$PATH:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.local/share/gem/ruby/3.0.0/bin
+export PATH=$PATH:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.local/share/gem/ruby/3.0.0/bin:~/.emacs.d/bin
 
 #Default editor is doom-emacs of course
 export EDITOR='vim'
@@ -132,6 +132,9 @@ alias pscpu='ps auxf | sort -nr -k 3 | less'
 #Net 
 alias iip="curl --max-time 10 -w '\n' http://ident.me"
 alias ping="gping"
+
+#Pacman
+alias broswe-pkgs="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"
 
 eval "$(starship init zsh)"
 eval $(thefuck --alias)
