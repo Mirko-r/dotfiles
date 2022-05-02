@@ -29,7 +29,12 @@ alias rm='rm -i'
 # Memory / disk management
 alias df='df -h'                          					# human-readable sizes
 alias free='free -m'                      					# show sizes in MB
-alias disks='lsblk -o NAME,SIZE,TYPE,MOUNTPOINTS,FSTYPE'			# show disk and fs
+alias disks='echo "╓───── m o u n t . p o i n t s"; \
+			 echo "╙────────────────────────────────────── ─ ─ "; \
+			 lsblk -a; echo ""; \
+			 echo "╓───── d i s k . u s a g e";\
+			 echo "╙────────────────────────────────────── ─ ─ "; \
+			 df -h;'						# show disk and fs
 
 # get error messages from journalctl
 alias jctl="journalctl -p 3 -xb"

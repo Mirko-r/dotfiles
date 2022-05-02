@@ -37,26 +37,8 @@ setopt no_beep
 setopt no_list_beep
 setopt no_hist_beep
 
-# Load aliases
-if [ -f ~/.zsh/zshalias ]; then
-    source ~/.zsh/zshalias
-else
-    print "404: ~/.zsh/zshalias not found."
-fi
-
-# Load variables
-if [ -f ~/.zsh/zshenv ]; then
-    source ~/.zsh/zshenv
-else
-    print "404 ~/.zsh/zshenv not found."
-fi
-
-# Load functions
-if [ -f ~/.zsh/zshfunctions ]; then
-    source ~/.zsh/zshfunctions
-else
-    print "404 ~/.zsh/zshfunctions not found"
-fi
+# Load configs
+for config (~/.zsh/*) source $config
 
 eval "$(starship init zsh)"
 eval $(thefuck --alias)
