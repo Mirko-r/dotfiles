@@ -2,7 +2,7 @@
 	"layer": "top",
 	"modules-left": ["custom/launcher","cpu","memory","network","tray"],
 	"modules-center": ["sway/workspaces"],
-	"modules-right": ["custom/updates","backlight","pulseaudio","clock", "battery","custom/power"],
+	"modules-right": ["custom/updates","backlight","pulseaudio","custom/notification","clock", "battery","custom/power"],	
 	
 	"pulseaudio": {
 		"tooltip": false,
@@ -14,15 +14,18 @@
 			"default": ["", "", ""]
 		}
 	},
+	
 	"sway/workspaces": {
         	"disable-scroll": true,
         	"all-outputs": false,
    	},
+	
 	"network": {
 		"tooltip": false,
 		"format-wifi": "  {essid}",
 		"format-ethernet": ""
 	},
+	
 	"backlight": {
 		"tooltip": false,
 		"format": " {}%",
@@ -30,6 +33,7 @@
         "on-scroll-up": "light -A 5",
 		"on-scroll-down": "light -U 5"
 	},
+    
     "battery": {
         "states": {
             "good": 95,
@@ -42,38 +46,52 @@
         "format-alt": "{time} {icon}",
         "format-icons": ["", "", "", "", ""]
     },
-	"tray":{
-		"icon-size":18,
-		"spacing": 10
-	},
+    
+    "tray":{
+	"icon-size":18,
+	"spacing": 10
+    },
+    
     "clock": {
        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format": "{:%d %b %y | %H:%M:%S}",
         "interval": 1, 
     },
+    
     "cpu": {
         "interval": 15,
         "format": " {}%",
         "max-length": 10
+    
     },
+    
     "memory": {
         "interval": 30,
         "format": " {}%",
         "max-length": 10
     },
+    
     "custom/launcher":{
         "format": " ",
         "on-click": "rofi -show drun",
     },
+    
     "custom/power":{
         "format": " ",
 	"on-click" : "~/.config/waybar/script/logout.sh"
     },
+    
     "custom/updates":{
         "format": "{} Update(s)",
         "exec": "checkupdates | wc -l",
         "exec-if": "[[ $(checkupdates | wc -l) != 0 ]]",
         "interval": 15,
         "on-click": "alacritty -e paru -Syu && notify-send 'The system has been updated' "
+    },
+
+    "custom/notification":{
+	"tooltip": false,
+	"format":  "🔔",
+	"on-click": "swaync-client -t -sw"
     },
 }

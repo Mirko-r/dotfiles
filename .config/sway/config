@@ -249,6 +249,9 @@ bindsym XF86MonBrightnessUp exec brightnessctl set +5% | sed -En 's/.*\(([0-9]+)
 # Take a Screenshot with the region select (Stamp)
 bindsym Print exec grim -t jpeg -g "$(slurp)" ~/Immagini/$(date +%Y-%m-%d_%H-%m-%s).jpg
 
+# Toggle swaync panel 
+bindsym $mod+Shift+n exec swaync-client -t -sw
+
 #
 # Status Bar:
 #
@@ -259,10 +262,11 @@ bar {
 
 exec GDK_BACKEND=wayland
 exec CLUTTER_BACKEND=wayland
-exec mako
+exec swaync
 exec nm-applet --indicator
 exec "/home/mirko/.cargo/bin/rot8"
 exec "~/.config/sway/script/battery.sh&"
 exec_always --no-startup-id workstyle &> /tmp/workstyle.log
+exec_always --no-startup-id autotiling
 exec rm -f /tmp/sovpipe && mkfifo /tmp/sovpipe && tail -f /tmp/sovpipe | sov
 include /etc/sway/config.d/*
