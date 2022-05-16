@@ -4,6 +4,7 @@ export UPDATE_ZSH_DAYS=1
 # Wayland specific
 export MOZ_USE_XINPUT2=1
 export MOZ_ENABLE_WAYLAND=1
+export QT_QPA_PLATFORM=wayland
 
 # System language
 export LANG=it_IT.UTF-8
@@ -31,3 +32,5 @@ if [ "$XDG_SESSION_DESKTOP" = "sway" ] ; then
     export _JAVA_AWT_WM_NONREPARENTING=1
 fi
 
+# hstr
+export HSTR_CONFIG=hicolor

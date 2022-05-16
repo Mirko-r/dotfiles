@@ -68,3 +68,6 @@ alias ipa="ip a | pcregrep -M -o '^[^\t:]+:([^\n]|\n\t)*UP'"	# Get active interf
 
 #Pacman
 alias broswe-pkgs="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"
+
+#Hstr
+alias hh=hstr

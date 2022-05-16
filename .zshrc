@@ -36,9 +36,12 @@ setopt share_history # Share history between multiple shells
 setopt no_beep
 setopt no_list_beep
 setopt no_hist_beep
+# Hstr
+setopt histignorespace
 
 # Load configs
 for config (~/.zsh/*) source $config
 
+bindkey -s "\C-r" "\C-a hstr -- \C-j"
+
 eval "$(starship init zsh)"
-eval $(thefuck --alias)
