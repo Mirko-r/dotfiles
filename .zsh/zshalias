@@ -67,7 +67,7 @@ alias ping="gping"
 alias ipa="ip a | pcregrep -M -o '^[^\t:]+:([^\n]|\n\t)*UP'"	# Get active interface
 
 #Pacman
-alias broswe-pkgs="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"
+alias browse-pkgs='sudo pacman -S $(pacman -Sql | fzf --preview "pacman -Si {};pacman -Fl {}" --layout=reverse)'
 
 #Hstr
 alias hh=hstr
