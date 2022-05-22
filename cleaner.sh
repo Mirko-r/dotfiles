@@ -109,8 +109,68 @@ gentooClean(){
 
     echo -e "\n${bold} Checking for obselete packages... ${reset}"
     eix-test-obsolete
+}
 
-    
+removeJunkFile(){
+
+    if [ -d "~/.cache/" ]; then 
+        echo -e "\n${bold}Clean the cache in your $HOME directory ${reset}"
+        sudo du -sh ~/.cache/
+        echo ""
+
+        if ask "Do you want to remove ?" Y; then
+    	    sudo rm -rf ~/.cache/*
+    	    echo -e "${bold}Done!${reset}\n"
+        else
+    	    echo -e "\n${bold}Aborting...${reset}\n"
+        fi
+
+    fi
+
+    if [ -d "/var/log/journal/" ]; then
+        echo -e "\n${bold}Clean old journal logs ${reset}"
+        sudo du -sh /var/log/journal/
+        echo ""
+
+        if ask "Do you want to remove ?" Y; then
+	        sudo rm -rf /var/log/journal/*
+	        echo -e "${bold}Done!${reset}\n"
+        else
+	        echo -e "\n${bold}Aborting...${reset}\n"
+        fi
+
+    fi
+
+    if [ -d "$HOME/.local/share/Trash/" ] || [ -d "/root/.local/share/Trash/" ]; then
+        echo -e "\n${bold}Clean the trash${reset}"
+        sudo du -sh  $HOME/.local/share/Trash/
+        sudo du -sh /root/.local/share/Trash/
+        echo ""
+
+        if ask "Do you want to remove ?" Y; then
+            rm -rf /home/*/.local/share/Trash/*/** &> /dev/null
+            rm -rf /root/.local/share/Trash/*/** &> /dev/null
+            echo -e "${bold}Done!${reset}\n"
+        else
+            echo -e "\n${bold}Aborting...${reset}\n"
+        fi
+
+    fi
+
+    if [ -d "/var/tmp/" ] || [ -d "/tmp/" ]; then
+        echo -e "\n${bold}Clean temp folders${reset}"
+        sudo du -sh /var/tmp/
+        sudo du -sh /tmp/
+        echo ""
+
+        if ask "Do you want to remove ?" Y; then
+	        sudo rm -rf /var/tmp/* /tmp/*
+	        echo -e "${bold}Done!${reset}\n"
+        else
+	        echo -e "\n${bold}Aborting...${reset}\n"
+        fi
+
+    fi
 }
 
 if exists pacman; then
@@ -123,60 +183,4 @@ elif exists emerge; then
     gentooClean
 fi
 
-echo -e "\n${bold}Clean the cache in your $HOME directory ${reset}"
-
-sudo du -sh ~/.cache/
-
-echo ""
-
-if ask "Do you want to remove ?" Y; then
-	sudo rm -rf ~/.cache/*
-	echo -e "${bold}Done!${reset}\n"
-else
-	echo -e "\n${bold}Aborting...${reset}\n"
-fi
-
-echo -e "\n${bold}Clean old journal logs ${reset}"
-
-sudo du -sh /var/log/journal/
-
-echo ""
-
-if ask "Do you want to remove ?" Y; then
-	sudo rm -rf /var/log/journal/*
-	echo -e "${bold}Done!${reset}\n"
-else
-	echo -e "\n${bold}Aborting...${reset}\n"
-
-fi
-
-echo -e "\n${bold}Clean the trash${reset}"
-
-sudo du -sh  $HOME/.local/share/Trash/
-
-sudo du -sh /root/.local/share/Trash/
-
-echo ""
-
-if ask "Do you want to remove ?" Y; then
-    rm -rf /home/*/.local/share/Trash/*/** &> /dev/null
-    rm -rf /root/.local/share/Trash/*/** &> /dev/null
-    echo -e "${bold}Done!${reset}\n"
-else
-    echo -e "\n${bold}Aborting...${reset}\n"
-fi
-
-echo -e "\n${bold}Clean temp folders${reset}"
-
-sudo du -sh /var/tmp/
-
-sudo du -sh /tmp/
-
-echo ""
-
-if ask "Do you want to remove ?" Y; then
-	sudo rm -rf /var/tmp/* /tmp/*
-	echo -e "${bold}Done!${reset}\n"
-else
-	echo -e "\n${bold}Aborting...${reset}\n"
-fi
+removeJunkFile
