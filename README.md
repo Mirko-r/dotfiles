@@ -28,10 +28,10 @@ Contains a script and a service (which must be enabled of course) for disabling 
 Disable touch when usign pen 
 in bin/ and systemd/
 
-## [cleaner.sh](./cleaner.sh) :
+## [cleaner.sh](./scripts/cleaner.sh) :
 system cleaner script
 
-## [gentoo-update.sh](./gentoo-update.sh) :
+## [gentoo-update.sh](./scripts/gentoo-update.sh) :
 Gentoo system updater
 
 ## [Custom Gnome folder icons](./.local/share/icons)
