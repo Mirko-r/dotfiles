@@ -27,14 +27,8 @@ alias mv='mv -i'
 alias rm='rm -i'
 
 # Memory / disk management
-alias df='df -h'                          					# human-readable sizes
-alias free='free -m'                      					# show sizes in MB
-alias disks='echo "╓───── m o u n t . p o i n t s"; \
-			 echo "╙────────────────────────────────────── ─ ─ "; \
-			 lsblk -a; echo ""; \
-			 echo "╓───── d i s k . u s a g e";\
-			 echo "╙────────────────────────────────────── ─ ─ "; \
-			 df -h;'						# show disk and fs
+alias df='duf'                          					
+alias free='free -ghl'                      					# show sizes in GB
 
 # get error messages from journalctl
 alias jctl="journalctl -p 3 -xb"
@@ -71,3 +65,9 @@ alias browse-pkgs='sudo pacman -S $(pacman -Sql | fzf --preview "pacman -Si {};p
 
 #Hstr
 alias hh=hstr
+
+#clipboard
+alias clp="wl-copy"
+
+#reboot into uefi 
+alias reboot-uefi="systemctl reboot --firmware-setup"
