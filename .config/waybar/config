@@ -1,6 +1,6 @@
 {
 	"layer": "top",
-	"modules-left": ["custom/launcher","cpu","memory","network","tray"],
+	"modules-left": ["custom/launcher","cpu","disk", "memory","network","tray"],
 	"modules-center": ["sway/workspaces"],
 	"modules-right": ["custom/updates","backlight","pulseaudio","custom/notification","clock", "battery","custom/power"],	
 	
@@ -17,7 +17,7 @@
 	
 	"sway/workspaces": {
         	"disable-scroll": true,
-        	"all-outputs": false,
+        	"all-outputs": false
    	},
 	
 	"network": {
@@ -55,7 +55,7 @@
     "clock": {
        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format": "{:%d %b %y | %H:%M:%S}",
-        "interval": 1, 
+        "interval": 1
     },
     
     "cpu": {
@@ -63,6 +63,13 @@
         "format": " {}%",
         "max-length": 10
     
+    },
+
+    "disk": {
+        "interval": 60,
+        "path": "/",
+        "format": "󰋊 {percentage_used}%",
+        "tooltip-format": "{used} usati su {total} ({free} liberi)"
     },
     
     "memory": {
@@ -73,7 +80,7 @@
     
     "custom/launcher":{
         "format": " ",
-        "on-click": "rofi -show drun",
+        "on-click": "rofi -show drun"
     },
     
     "custom/power":{
@@ -93,5 +100,5 @@
 	"tooltip": false,
 	"format":  "🔔",
 	"on-click": "swaync-client -t -sw"
-    },
+    }
 }
