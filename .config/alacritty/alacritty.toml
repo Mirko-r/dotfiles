@@ -1,0 +1,59 @@
+[general]
+live_config_reload = true
+
+[env]
+TERM = "xterm-256color"
+
+[window]
+opacity = 0.90
+dynamic_title = true
+decorations_theme_variant = "Dark"
+
+[cursor]
+style = { shape = "Beam", blinking = "On" }
+blink_interval = 750
+unfocused_hollow = true
+
+[bell]
+animation = "EaseOutExpo"
+color = "#ffffff"
+duration = 0
+
+[mouse]
+hide_when_typing = true
+
+[terminal.shell]
+program = "/bin/zsh"
+
+# Colori Dracula
+[colors.primary]
+background = "#282a36"
+foreground = "#f8f8f2"
+
+[colors.cursor]
+text = "#44475a"
+cursor = "#f8f8f2"
+
+[colors.selection]
+text = "#f8f8f2"
+background = "#44475a"
+
+[colors.normal]
+black   = "#000000"
+red     = "#ff5555"
+green   = "#50fa7b"
+yellow  = "#f1fa8c"
+blue    = "#caa9fa"
+magenta = "#ff79c6"
+cyan    = "#8be9fd"
+white   = "#bfbfbf"
+
+[colors.bright]
+black   = "#575b70"
+red     = "#ff6e67"
+green   = "#5af78e"
+yellow  = "#f4f99d"
+blue    = "#caa9fa"
+magenta = "#ff92d0"
+cyan    = "#9aedfe"
+white   = "#e6e6e6"
