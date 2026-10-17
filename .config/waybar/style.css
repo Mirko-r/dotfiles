@@ -1,6 +1,6 @@
 * {
 	border: none;
-	border-radius: 10;
+	border-radius: 10px;
     font-family: "JetbrainsMono Nerd Font" ;
 	font-size: 15px;
 	min-height: 10px;
@@ -170,6 +170,17 @@ window#waybar.hidden {
 	transition: none;
 	color: #161320;
 	background: #96CDFB;
+}
+#disk {
+	margin-top: 6px;
+	margin-left: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 0px;
+	border-radius: 10px;
+	transition: none;
+	color: #161320;
+	background: #F5C2E7;
 }
 
 #tray {
