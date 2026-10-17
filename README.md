@@ -52,7 +52,7 @@ Gentoo system updater
 
 ## Preview
 
-- [Alacritty config](./.config/alacritty/alacritty.yml)
+- [Alacritty config](./.config/alacritty/alacritty.toml)
 - [Bash Config](./.bashrc)
 
 ### [Bat config](./.config/bat/config)
